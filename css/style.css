@@ -1,0 +1,404 @@
+*{
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+    color: #E9DFE0;
+    /* outline: 3px solid red !important; */
+}
+
+body{
+    background-color: #0E0A18;
+    position: relative;
+    margin: 0;
+}
+
+.fa-arrow-up{
+    position: fixed;
+    right: 2%;
+    bottom: 2%;
+    z-index: 2;
+}
+
+.container{
+    margin: 0;
+}
+
+.sect{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 60px;
+    font-size: 18px;
+    margin-top: 20;
+}
+
+a {
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.nav-logo{
+    font-family: 'League Spartan', 'Spartan', sans-serif;
+    font-size: 36px;
+    font-weight: 600;
+}
+
+.logo{
+    color: #BDC3C7;
+}
+
+.site-name{
+    color: #E9DFE0;
+}
+
+nav{
+    width: 80vw;
+    font-size: 18px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 15px 90px;
+}
+
+.list-container {
+    margin: 0;
+    list-style: none;
+    display: flex;
+    gap: 2rem;
+}
+
+.list-container a{
+    color: #a6a6a6;
+    font-weight: 500;
+}
+
+.name-color{
+    color: #4717F7;
+}
+
+main {
+    margin: 5px 180px;
+}
+
+.hero-sect{
+    position: relative;
+}
+
+.hero-information{
+    width: 500px;
+    margin-left: 5px;
+}
+
+.hero-illustration{
+    margin-right: 5px;
+}
+
+.hero-illustration img{
+    width: 350px;
+}
+
+.social-icons{
+    font-size: 32px;
+    display: flex;
+    gap: 1.5rem;
+}
+
+.fa-twitter{
+    color: #1da1f2 !important;
+}
+
+.fa-twitter:hover{
+    color: rgba(29, 161, 242, 0.5) !important;/*Try it as rgba with opacity*/
+}
+
+.fa-instagram{
+    background-image: linear-gradient(to bottom right, #405DE6, #5B51D8, #833AB4, #C13584, #E1306C, #FD1D1D, #F56040, #F77737, #FCAF45, #FFDC80) !important;
+    background-size: 100%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.fa-instagram:hover{
+    background-image: linear-gradient(to bottom right, rgba(64, 93, 230, 0.5), rgba(91, 81, 216, 0.5), rgba(131, 58, 180, 0.5), rgba(193, 53, 132, 0.5), rgba(225, 48, 108, 0.5), rgba(253, 29, 29, 0.5), rgba(245, 96, 64, 0.5), rgba(247, 119, 55, 0.5), rgba(252, 175, 69, 0.5), rgba(255, 220, 128, 0.5)) !important;
+    background-size: 100%;
+}
+
+.fa-linkedin{
+    color: #0072B1;
+}
+
+.fa-linkedin:hover{
+    color: rgba(0, 114, 177, 0.5)
+}
+
+.fa-github{
+    color: #333;
+}
+
+.fa-github:hover{
+    color: rgba(51,51,51, 0.5);
+}
+
+.fa-at:hover{
+    color: rgba(255,255,255, 0.5);
+}
+
+.action-buttons{
+    display: flex;
+    gap: 1rem;
+}
+
+.stnd-btn{
+    cursor: pointer;
+    font-size: 18px;
+    margin-top: 20px;
+    min-width: 135px;
+    padding-left: 16px;
+    padding-right: 16px;
+    height: 40px;
+    border-radius: 35px;
+    border: 0;
+    font-weight: 500;
+    gap: 2rem;
+    background-color: #4717f7;
+}
+
+.stnd-btn:hover{
+    background-color: rgba(71, 23, 247, 0.5);
+}
+
+.action-buttons .stnd-btn{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.btn-my-cv{
+    background-color: #130e20;
+}
+
+.btn-my-cv:hover{
+    background-color: rgba(19, 14, 32, 0.5);
+}
+
+.about-container{
+    padding-top: 40px;
+}
+
+.about-information{
+    width: 600px;
+}
+
+.my-skills{
+    display: flex;
+    flex-direction: column;
+    width: 250px;
+    position: relative;
+}
+
+.my-skills p{
+    margin-top: 7px;
+    margin-bottom: 0;
+}
+
+.full-bar{
+    text-align: center;
+    width: 100%;
+    height: 30px;
+    border-radius: 30px;
+    background-color: #130e20;
+    box-shadow: 1px 1px 3px #a43acb;
+}
+
+.skill-text{
+    position: relative;
+    z-index: 3;
+}
+
+.filled-bar{
+    position: absolute;
+    left: 0;
+    width: 45%;
+    height: 29px;
+    border-radius: 25px;
+    background-color: #4717f7;
+}
+
+.c-sharp-value{
+    width: 70%;
+}
+
+.web-dev-value{
+    width: 85%;
+}
+
+.UI-design-value{
+    width: 65%;
+}
+
+.sql-value{
+    width: 85%;
+}
+
+.python-value{
+    width: 75%;
+}
+
+.experience-container{
+    display: block;
+    padding-top: 40px;
+}
+
+.my-experiences{
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.experiences-illustration img{
+    width: 350px;
+}
+
+.experiences-list{
+    width: 550px;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.education-experience, .employment-experience{
+    background-color: #130e20;
+    padding: 1.5rem;
+    padding-top: 0;
+    padding-bottom: 0;
+}
+
+.my-projects{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.card{
+    width:345px;
+    background-color: #130e20;
+    text-align: center;
+    padding: 1.5rem;
+    border-radius: 5%;
+}
+
+.card-header{
+    height: 195px;
+}
+
+.card-content{
+    display: flex;
+    justify-content: center;
+    position: relative;
+    min-height: 280px;
+}
+
+.card-content h4{
+    position: absolute;
+    top: 0
+}
+
+.card-content button{
+    position: absolute;
+    bottom: 0;
+}
+
+.contact-me {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 40px;
+    /* outline: 3px solid yellow !important;
+    z-index: 2; */
+}
+
+.material-symbols-sharp.md-48 {
+    font-size: 48px;
+  }
+
+.contact-bars{
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    width: 60%;
+    padding: 10px;
+    /* outline: 3px solid green !important;
+    z-index: 2; */
+}
+
+.contact-bar{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 15px;
+    width: 525px;
+    height: 200px;
+    background-color: #4717F7;
+    font-size: larger;
+    font-weight: 500;
+    text-align: center;
+}
+
+.contact-icons{
+    color: #0E0A18;
+    cursor:pointer;
+}
+
+.contact-icons:hover{
+    color: rgba(255,255,255, 0.5);
+}
+
+.email-me{
+    display: flex;
+    width: 41%;
+    /* outline: 3px solid blue !important;
+    z-index: 3; */
+}
+
+.email-me form{
+    position: relative;
+    /* outline: 3px solid purple !important;
+    z-index: 2;  */
+    width: 100%;
+    padding: 10px;
+}
+
+.email-me input{
+    padding: 10px;
+    color:#0E0A18;
+    font-weight: 500;
+    width: 350px;
+    height: 35px;
+    border: none;
+    border-radius: 35px;
+    margin-bottom: 5px;
+}
+
+.email-me textarea{
+    padding: 10px;
+    color:#0E0A18;
+    font-weight: 500;
+    width: 350px;
+    height: 140px;
+    border: none;
+    border-radius: 15px;
+    margin-bottom: 5px;
+}
+
+.message-btn{
+    bottom: 5%;
+    right: 10%;
+    justify-self: end;
+    position: absolute;
+}
+
+footer{
+    position: absolute;
+    background-color: #130e20;
+    text-align: center;
+    width: 100%;
+    bottom: -15;
+}
