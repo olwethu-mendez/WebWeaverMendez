@@ -2,7 +2,7 @@
 @import "https://unpkg.com/open-props/normalize.min.css";
 
 *{
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Poppins', sans-serifppl
     box-sizing: border-box;
     color: var(--text-color--);
     /* outline: 3px solid red !important; */
@@ -427,7 +427,7 @@ main {
 
 .experience-container{
     display: block;
-    padding-top: 40px;
+    padding-top: 60px;
 }
 
 .my-experiences{
@@ -1065,6 +1065,7 @@ footer{
 
     .btn-show-all{
         text-align: center;
+        justify-content: center;
     }
 
     .contact-bar{
