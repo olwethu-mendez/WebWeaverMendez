@@ -2,7 +2,7 @@
 @import "https://unpkg.com/open-props/normalize.min.css";
 
 *{
-    font-family: 'Poppins', sans-serifppl
+    font-family: 'Poppins', sans-serif !important;
     box-sizing: border-box;
     color: var(--text-color--);
     /* outline: 3px solid red !important; */
@@ -80,7 +80,7 @@ a {
 }
 
 .nav-logo{
-    font-family: 'League Spartan', 'Spartan', sans-serif;
+    font-family: 'League Spartan', 'Spartan', sans-serif !important;
     font-size: 2.2rem;
     font-weight: 600;
 }
@@ -110,15 +110,31 @@ nav{
 }
 
 nav .nav-open{
+    transform: rotate(90deg);
     color: var(--text-color--);
-    font-size: 25px;
-    padding: 5px;
     cursor: pointer;
     display: none;
+    width: 20px;
+    height: 20px;
+    justify-content: space-around;
+}
+
+.nav-open .toggle-lines{
+    border: 1px solid var(--text-color--);
+    margin: 0;
+    padding: 0;
+    width: 10%;
+    text-align: center;
+    border-radius: 30px;
+    background-color: var(--text-color--)
 }
 
 .list-container .logo-toggle{
     display:none;
+}
+
+.dark-light i p{
+    display: none;
 }
 
 nav .other-nav-items{
@@ -362,7 +378,6 @@ main {
 }
 
 .about-container{
-    padding-top: 40px;
 }
 
 .about-information{
@@ -388,6 +403,10 @@ main {
     height: 30px;
     border-radius: 30px;
     background-color: var(--secondary-color--);
+    box-shadow: 1px 1px 3px var(--text-color--);
+}
+
+.full-bar:hover{
     box-shadow: 1px 1px 3px #a43acb;
 }
 
@@ -427,7 +446,7 @@ main {
 
 .experience-container{
     display: block;
-    padding-top: 60px;
+    padding-top: 40px;
 }
 
 .my-experiences{
@@ -596,7 +615,8 @@ main {
 }
 
 .btn-show-all{
-    justify-items: center;
+    margin-top: auto;
+    margin-bottom: auto;
     align-self: center;
 }
 
@@ -745,7 +765,7 @@ footer{
 @media only screen and (max-width: 1105px) {
 
     nav .nav-open{
-        display: block;
+        display: flex;
     }
 
     .list-container{
@@ -795,6 +815,11 @@ footer{
     nav{
         display: flex;
         justify-content: space-between;
+    }
+
+    nav .nav-open{
+        display: flex;
+        justify-self: start;
     }
 
     .desk-logo, .mob-logo{
@@ -854,13 +879,14 @@ footer{
         align-items: center;
         text-align: center;
         margin: 5px 10px 0 10px;
+        padding-left: 5%;
+        padding-right: 5%;
     }
 
     /**/
 
     nav .nav-open{
-        display: block;
-        justify-self: start;
+        display: flex;
     }
 
     .list-container{
@@ -902,6 +928,20 @@ footer{
         flex-direction: column;
     }
 
+    .other-nav-items{
+        width: 100%;
+    }
+
+    .list-container .dark-light{
+        width: 100%;
+        display: inline-flex;
+        background-color: var(--secondary-color--);
+    }
+
+    .dark-light i p{
+        display: block;
+    }
+
     nav li{
         display: flex;
         margin-bottom: 0;
@@ -914,11 +954,16 @@ footer{
     }
 
     .mob-logo{
-        display: block;
+        display: flex;
     }
 
     .nav-logo{
         justify-self: center;
+    }
+
+    nav a{
+        justify-self: center;
+        align-self: center;
     }
 
     .other-nav-items{

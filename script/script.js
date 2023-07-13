@@ -1,14 +1,17 @@
 const body = document.querySelector('body'),
     nav = document.querySelector('nav'),
-    modeToggle = document.querySelector('.bg-mode'),
-    searchToggle = document.querySelector('.searchToggle'),
+    modeToggle = document.querySelector('.dark-light'),
+    // searchToggle = document.querySelector('.searchToggle'),
     sidebarClose = document.querySelector('.nav-close'),
-    sidebarOpen = document.querySelector('.nav-open');
+    sidebarOpen = document.querySelector('.nav-open'),
+    topLine = document.querySelector('.top-line'),
+    middleLine = document.querySelector('.middle-line'),
+    bottomLine = document.querySelector('.bottom-line');
 
-    let getMode = localStorage.getItem("mode")
-    if(getMode && getMode === "light-mode"){
-        body.classList.add("dark");
-    }
+    let getMode = localStorage.getItem("mode");
+        if(getMode && getMode === "light-mode"){
+            body.classList.add("light");
+        }
     
 
     //toggling light and dark mode
@@ -23,20 +26,26 @@ const body = document.querySelector('body'),
         localStorage.setItem("mode", "light-mode");
     }
 
-    //toggling search box
-    searchToggle.addEventListener("click", () =>{
-        searchToggle.classList.toggle("active");
+    // //toggling search box
+    // searchToggle.addEventListener("click", () =>{
+    //     searchToggle.classList.toggle("active");
 
-    });
+    // });
 
     //sidebar toggle
 if(nav.classList.contains("active")){
     sidebarClose.addEventListener("click", () =>{
         nav.classList.remove("active");
+        // topLine.style.transform('rotate(45deg)');
+        // topLine.style.display('none');
+        // bottomLine.style.transform('rotate(-45deg)');
     })
 }else{
     sidebarOpen.addEventListener("click", () =>{
         nav.classList.add("active");
+        // topLine.style.transform('rotate(-45deg)');
+        // topLine.style.display('block');
+        // bottomLine.style.transform('rotate(45deg)');
     })
 }
 
