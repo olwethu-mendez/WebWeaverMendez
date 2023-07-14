@@ -36,16 +36,16 @@ const body = document.querySelector('body'),
 if(nav.classList.contains("active")){
     sidebarClose.addEventListener("click", () =>{
         nav.classList.remove("active");
-        // topLine.style.transform('rotate(45deg)');
-        // topLine.style.display('none');
-        // bottomLine.style.transform('rotate(-45deg)');
+        // topLine.style.transform = 'rotate(-45deg)';
+        // middleLine.style.display ='none';
+        // bottomLine.style.transform = 'rotate(45deg)';
     })
 }else{
     sidebarOpen.addEventListener("click", () =>{
         nav.classList.add("active");
-        // topLine.style.transform('rotate(-45deg)');
-        // topLine.style.display('block');
-        // bottomLine.style.transform('rotate(45deg)');
+        // topLine.style.transform = 'rotate(45deg)';
+        // middleLine.style.display = 'block';
+        // bottomLine.style.transform = 'rotate(-45deg)';
     })
 }
 

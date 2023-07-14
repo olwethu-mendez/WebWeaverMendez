@@ -114,9 +114,10 @@ nav .nav-open{
     color: var(--text-color--);
     cursor: pointer;
     display: none;
-    width: 20px;
-    height: 20px;
+    width: 25px;
+    height: 25px;
     justify-content: space-around;
+    margin-right: 20px;
 }
 
 .nav-open .toggle-lines{
@@ -126,14 +127,15 @@ nav .nav-open{
     width: 10%;
     text-align: center;
     border-radius: 30px;
-    background-color: var(--text-color--)
+    background-color: var(--text-color--);
+    pointer-events: none;
 }
 
 .list-container .logo-toggle{
     display:none;
 }
 
-.dark-light i p{
+.dark-light i span{
     display: none;
 }
 
@@ -769,8 +771,13 @@ footer{
     }
 
     .list-container{
+        display: flex;
+        flex-direction: column;
+        margin: 0;
+        padding: 0;
+        gap: 1.5rem;
         position: fixed;
-        height: 65%;
+        height: auto;
         width: 100%;
         left: 0;
         top: -100%;
@@ -785,11 +792,16 @@ footer{
     }
 
     .list-container .logo-toggle{
-        display: block;
         width: 100%;
         display: flex;
         align-items: center;
         justify-content: space-between;
+    }
+
+    .logo-toggle a{
+        justify-self: center;
+        margin-right: auto;
+        margin-left: auto;
     }
 
     .logo-toggle .fa-close{
@@ -801,6 +813,7 @@ footer{
     nav .list-container{
         padding-top: 20px;
         flex-direction: column;
+        align-items: center;
     }
 
     nav li{
@@ -809,12 +822,42 @@ footer{
         justify-content: center;
         align-items: center;
     }
+
+    .card-container{
+        margin-left: 55px;
+        margin-right: 55px;
+        gap: 8rem;
+        padding: 15px;
+        display: grid;
+        grid-auto-flow: column;
+        grid-auto-columns: 25%;
+        overflow-x: auto;
+        overscroll-behavior-inline: contain;
+    }
 }
 
 @media only screen and (max-width: 991px){
     nav{
         display: flex;
         justify-content: space-between;
+    }
+
+    body{
+        width: 100vw;
+        margin: 0;
+        padding: 0;
+    }
+
+    main{
+        display: flex;
+        flex-direction: column;
+        width: 90%;
+        margin: 0;
+        padding: 0;
+        outline: 3px solid blue;
+        z-index: 999;
+        margin-left: auto;
+        margin-right: auto;
     }
 
     nav .nav-open{
@@ -832,6 +875,7 @@ footer{
 
     .container{
         margin-top: 10px;
+        width: 100%;
     }
 
     .sect{
@@ -843,12 +887,42 @@ footer{
         margin-top: 20;
         padding-top: 20px;
         padding-bottom: 20px;
+        width: 95%;
+        outline: 3px solid red;
+        margin: 20px auto 60px auto;
+        padding: 20px 0 20px 0;
+
+    }
+    
+    .hero-sect, .about-information, .my-skills, .my-experiences {
+        width: 97%;
+        /* margin-left: auto;
+        margin-right: auto; */
+    }
+
+    .hero-sect div, .hero-sect div div{
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .hero-information{
+        width: 90%;
+    }
+
+    .experience-container .my-experiences div{
+        width: 99%;
+    }
+
+    .experiences-list{
+        margin-top: 15%;
+    }
+    .experiences-list div{
+        width: 95%;
     }
 
     .hero-sect{
         display: flex;
-        flex-direction: column-reverse;
-        flex-flow: column-reverse;
+        flex-direction: column;
     }
 
     .my-skills{
@@ -856,7 +930,11 @@ footer{
     }
 
     .my-experiences{
-        flex-direction: column-reverse;
+        flex-direction: column;
+    }
+
+    .card-container{
+        gap: 12rem;
     }
 }
 
@@ -938,7 +1016,7 @@ footer{
         background-color: var(--secondary-color--);
     }
 
-    .dark-light i p{
+    .dark-light i span{
         display: block;
     }
 
@@ -973,7 +1051,7 @@ footer{
     /**/
 
     main{
-        margin: 0;
+        margin: 0 auto 0 auto;
         padding-left: 5px;
         padding-right: 5px;
     }
@@ -1013,6 +1091,14 @@ footer{
 
     .hero-information, .hero-illustration, .about-information, .my-skills, .experiences-illustration, .education-experience, .employment-experience, .contact-bars, .email-me{
         width: 100%;
+    }
+
+    .hero-sect, .about-container, .experience-container, .contact-me{
+        justify-content: center;
+    }
+
+    h2{
+        text-align: center;
     }
 
     .hero-information{
