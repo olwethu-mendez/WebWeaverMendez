@@ -854,7 +854,7 @@ footer{
         width: 90%;
         margin: 0;
         padding: 0;
-        outline: 3px solid blue;
+        /* outline: 3px solid blue; */
         z-index: 999;
         margin-left: auto;
         margin-right: auto;
@@ -888,7 +888,7 @@ footer{
         padding-top: 20px;
         padding-bottom: 20px;
         width: 95%;
-        outline: 3px solid red;
+        /* outline: 3px solid red; */
         margin: 20px auto 60px auto;
         padding: 20px 0 20px 0;
 
