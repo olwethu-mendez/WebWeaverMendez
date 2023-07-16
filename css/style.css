@@ -43,7 +43,7 @@ body.light{
     
 }
 
-.fa-arrow-up{
+.bi-arrow-up{
     position: fixed;
     right: 2%;
     bottom: 2%;
@@ -110,25 +110,53 @@ nav{
 }
 
 nav .nav-open{
-    transform: rotate(90deg);
-    color: var(--text-color--);
-    cursor: pointer;
     display: none;
-    width: 25px;
-    height: 25px;
-    justify-content: space-around;
-    margin-right: 20px;
+    position: absolute;
+    top: 1.5em;
+    right: 80px;
+}
+
+.toggle-lines{
+    display: block;
+    position: relative;
+}
+
+.top-line, .middle-line, .bottom-line{
+    width: 1.5em;
+    height: 3px;
+    background-color: var(--text-color--);
+
+    transition: transform 500ms ease-in-out;
+}
+
+.top-line, .bottom-line{
+    position: absolute;
+    left: 0;
 }
 
 .nav-open .toggle-lines{
-    border: 1px solid var(--text-color--);
-    margin: 0;
-    padding: 0;
-    width: 10%;
-    text-align: center;
-    border-radius: 30px;
-    background-color: var(--text-color--);
     pointer-events: none;
+}
+
+.top-line{top: 10px;}
+
+.bottom-line{bottom: 10px;}
+
+nav.active .nav-open{
+    transform: translateX(0);
+    z-index: 200;
+}
+
+nav.active .nav-open .top-line{
+    top: 0;
+    transform: rotate(45deg);
+}
+
+nav.active .nav-open .middle-line{opacity: 0;}
+
+nav.active .nav-open .bottom-line{
+    bottom: 0;
+    transform: rotate(-45deg);
 }
 
 .list-container .logo-toggle{
@@ -137,6 +165,7 @@ nav .nav-open{
 
 .dark-light i span{
     display: none;
+    color: var(--link-color--);
 }
 
 nav .other-nav-items{
@@ -162,32 +191,32 @@ nav .other-nav-items{
     transition: all 0.3s ease;
 }
 
-.bg-mode .fa-moon-o{
+.bg-mode .bi-moon{
     opacity: 0;
     pointer-events: none;
 }
 
-.bg-mode.active .fa-moon-o{
+.bg-mode.active .bi-moon{
     opacity: 1;
     pointer-events: auto;
 }
 
-.bg-mode.active .fa-sun-o{
+.bg-mode.active .bi-sun{
     opacity: 0;
     pointer-events: none;
 }
 
-.searchToggle .fa-close{
+.searchToggle .close{
     opacity: 0;
     pointer-events: none;
 }
 
-.searchToggle.active .fa-close{
+.searchToggle.active .close{
     opacity: 1;
     pointer-events: auto;
 }
 
-.searchToggle.active .fa-search{
+.searchToggle.active .bi-search{
     opacity: 0;
     pointer-events: none;
 }
@@ -299,43 +328,43 @@ main {
     gap: 1.5rem;
 }
 
-.fa-twitter{
+.bi-twitter{
     color: #1da1f2 !important;
 }
 
-.fa-twitter:hover{
+.bi-twitter:hover{
     color: rgba(29, 161, 242, 0.5) !important;/*Try it as rgba with opacity*/
 }
 
-.fa-instagram{
+.bi-instagram{
     background-image: linear-gradient(to bottom right, #405DE6, #5B51D8, #833AB4, #C13584, #E1306C, #FD1D1D, #F56040, #F77737, #FCAF45, #FFDC80) !important;
     background-size: 100%;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
 
-.fa-instagram:hover{
+.bi-instagram:hover{
     background-image: linear-gradient(to bottom right, rgba(64, 93, 230, 0.5), rgba(91, 81, 216, 0.5), rgba(131, 58, 180, 0.5), rgba(193, 53, 132, 0.5), rgba(225, 48, 108, 0.5), rgba(253, 29, 29, 0.5), rgba(245, 96, 64, 0.5), rgba(247, 119, 55, 0.5), rgba(252, 175, 69, 0.5), rgba(255, 220, 128, 0.5)) !important;
     background-size: 100%;
 }
 
-.fa-linkedin{
+.bi-linkedin{
     color: #0072B1;
 }
 
-.fa-linkedin:hover{
+.bi-linkedin:hover{
     color: rgba(0, 114, 177, 0.5)
 }
 
-.fa-github{
+.bi-github{
     color: #333;
 }
 
-.fa-github:hover{
+.bi-github:hover{
     color: rgba(51,51,51, 0.5);
 }
 
-.fa-at:hover{
+.bi-at:hover{
     color: var(--text-hover-color--);
 }
 
@@ -631,6 +660,14 @@ main {
     z-index: 2; */
 }
 
+/* .sub-sect{
+    width: 50% !important;
+    margin-left: 10px !important;
+    margin-right: 10px !important;
+    padding-left: 10px !important;
+    padding-right: 10px !important;
+} */
+
 .material-symbols-sharp.md-48 {
     font-size: 3rem;
   }
@@ -767,7 +804,7 @@ footer{
 @media only screen and (max-width: 1105px) {
 
     nav .nav-open{
-        display: flex;
+        display: block;
     }
 
     .list-container{
@@ -804,7 +841,7 @@ footer{
         margin-left: auto;
     }
 
-    .logo-toggle .fa-close{
+    .logo-toggle .close{
         color: var(--text-color--);
         font-size: 25px;
         cursor: pointer;
@@ -861,7 +898,7 @@ footer{
     }
 
     nav .nav-open{
-        display: flex;
+        display: block;
         justify-self: start;
     }
 
@@ -964,7 +1001,7 @@ footer{
     /**/
 
     nav .nav-open{
-        display: flex;
+        display: block;
     }
 
     .list-container{
@@ -995,7 +1032,7 @@ footer{
         justify-content: space-between;
     }
 
-    .logo-toggle .fa-close{
+    .logo-toggle .close{
         color: var(--text-color--);
         font-size: 25px;
         cursor: pointer;
@@ -1013,7 +1050,6 @@ footer{
     .list-container .dark-light{
         width: 100%;
         display: inline-flex;
-        background-color: var(--secondary-color--);
     }
 
     .dark-light i span{
@@ -1209,6 +1245,10 @@ footer{
 
     .email-me input, .email-me textarea{
         width: 99%;
+    }
+
+    .action-buttons{
+        width: 100%;
     }
 
     .stnd-btn{
