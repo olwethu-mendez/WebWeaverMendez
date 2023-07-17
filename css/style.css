@@ -28,7 +28,7 @@ body{
     margin: 0;
 }
 
-body.light{
+.light{
     --body-color--: #E3E1E8;
     --text-color--:#211718;
     --link-color--:#595959;
@@ -1106,6 +1106,12 @@ footer{
     .list-container .dark-light{
         width: 100%;
         display: inline-flex;
+    }
+
+    .dark-light i{
+        width: 110% !important;
+        background-color: var(--body-color--) !important;
+        border-radius: 5px;
     }
 
     .dark-light i span{

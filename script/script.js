@@ -1,3 +1,5 @@
+let getMode = localStorage.getItem("mode");
+
 const body = document.querySelector('body'),
     nav = document.querySelector('nav'),
     modeToggle = document.querySelector('.dark-light'),
@@ -8,29 +10,42 @@ const body = document.querySelector('body'),
     middleLine = document.querySelector('.middle-line'),
     bottomLine = document.querySelector('.bottom-line');
 
-    let getMode = window.localStorage.getItem("mode");
-        if(getMode && getMode === "light-mode"){
-            body.classList.add("light");
-        }
-    
+const lightMode = () => {
+    document.body.classList.add("light");
+    localStorage.setItem("mode", "light-mode");
+    modeToggle.classList.add("active");
+};
 
-    //toggling light and dark mode
-    modeToggle.addEventListener("click", () =>{
-        modeToggle.classList.toggle("active");
-        body.classList.toggle("light");
-    });
-    
-    if(!body.classList.contains("light")){
-        window.localStorage.setItem("mode", "dark-mode");
+const darkMode = () => {
+    document.body.classList.remove("light");
+    localStorage.setItem("mode", "dark-mode");
+    modeToggle.classList.remove("active");
+};
+
+if(getMode !== "dark-mode"){
+    lightMode();
+}
+
+
+//toggling light and dark mode
+modeToggle.addEventListener("click", () =>{
+    getMode = localStorage.getItem("mode");
+    if(getMode !== "light-mode"){
+        lightMode();
     }else{
-        window.localStorage.setItem("mode", "light-mode");
+        darkMode();
     }
+});
 
-    // //toggling search box
-    // searchToggle.addEventListener("click", () =>{
-    //     searchToggle.classList.toggle("active");
+// if(!body.classList.contains("light")){
+// }else{
+// }
 
-    // });
+// //toggling search box
+// searchToggle.addEventListener("click", () =>{
+//     searchToggle.classList.toggle("active");
+
+// });
 
     //sidebar toggle
 // if(nav.classList.contains("active")){
