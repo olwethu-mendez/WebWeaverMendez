@@ -43,6 +43,13 @@ body.light{
     
 }
 
+.arrow-container{
+    display: block;
+    border: 1px solid white;
+    padding: 7px;
+    background-color: rgba(89, 89, 89, 0.5);
+}
+
 .bi-arrow-up{
     position: fixed;
     right: 2%;
@@ -60,10 +67,12 @@ body.light{
 .sect{
     display: flex;
     justify-content: space-between;
-    margin-bottom: 60px;
     font-size: 1.125rem;
-    margin-top: 20px;
     padding: 20px 180px;
+}
+
+.experience-container h2{
+    margin: 20px 180px !important;
 }
 
 a {
@@ -126,7 +135,7 @@ nav .nav-open{
     height: 3px;
     background-color: var(--text-color--);
 
-    transition: transform 500ms ease-in-out;
+    transition: transform 350ms ease-in-out, opacity 200ms linear;
 }
 
 .top-line, .bottom-line{
@@ -147,16 +156,21 @@ nav.active .nav-open{
     z-index: 200;
 }
 
-nav.active .nav-open .top-line{
-    top: 0;
-    transform: rotate(45deg);
+nav.active .nav-open .middle-line{
+    /* top: 0; */opacity: 0;
 }
 
-nav.active .nav-open .middle-line{opacity: 0;}
+nav.active .nav-open .toggle-lines{
+    transform: rotate(45deg) translate(-14px);
+}
+
+/* nav.active .nav-open .middle-line{
+    transform: rotate(45deg);
+} */
 
 nav.active .nav-open .bottom-line{
-    bottom: 0;
-    transform: rotate(-45deg);
+    /* bottom: 0; */
+    transform: rotate(-45deg) translate(-14px);
 }
 
 .list-container .logo-toggle{
@@ -164,6 +178,7 @@ nav.active .nav-open .bottom-line{
 }
 
 .dark-light i span{
+    font-style: norml;
     display: none;
     color: var(--link-color--);
 }
@@ -175,8 +190,6 @@ nav .other-nav-items{
 }
 
 .other-nav-items .bg-mode, .other-nav-items .searchToggle{
-    width: 40px;
-    height: 40px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -283,6 +296,7 @@ nav .other-nav-items{
     list-style: none;
     display: flex;
     gap: 2rem;
+    align-items: center;
 }
 
 .list-container a{
@@ -477,7 +491,6 @@ main {
 
 .experience-container{
     display: block;
-    padding-top: 40px;
 }
 
 .my-experiences{
@@ -535,7 +548,7 @@ main {
 
 .experience-container h2{
     padding: 0;
-    margin-left: 180px;
+    margin: 0;
 }
 
 .my-projects{
@@ -608,6 +621,11 @@ main {
     padding-bottom: 15px;
 }
 
+.card:hover{
+    box-shadow: #a43acb 2px 2px 5px;
+    scale: 1.05;
+}
+
 .card-header{
     height: 195px;
 }
@@ -646,9 +664,11 @@ main {
 }
 
 .btn-show-all{
-    margin-top: auto;
-    margin-bottom: auto;
-    align-self: center;
+    display: flex;
+    margin: auto;
+    align-items: center;
+    justify-content: center;
+    width: fit-content;
 }
 
 .contact-me {
@@ -764,18 +784,15 @@ main {
 }
 
 footer{
-    position: absolute;
-    bottom: 0;
+    /* position: absolute;
+    bottom: 0; */
     background-color: var(--secondary-color--);
     text-align: center;
     width: 100%;
     margin: 0;
     padding-top: 15px;
-}
-
-.project-footer{
-    position: absolute;
-    bottom: 0;
+    display: flex;
+    justify-content: center;
 }
 
 /* @media only screen and (max-width: 1240px) {
@@ -801,10 +818,15 @@ footer{
     }
 } */
 
-@media only screen and (max-width: 1105px) {
+@media only screen and (max-width: 1130px) {
 
     nav .nav-open{
+        right: 150px;
         display: block;
+    }
+
+    .nav-logo{
+        padding-top: 0.25em;
     }
 
     .list-container{
@@ -874,6 +896,10 @@ footer{
 }
 
 @media only screen and (max-width: 991px){
+    *{
+        /* outline: 3px solid red !important; */
+    }
+    
     nav{
         display: flex;
         justify-content: space-between;
@@ -937,6 +963,28 @@ footer{
         margin-right: auto; */
     }
 
+    .experience-container{
+        /* outline: 4px solid pink !important; */
+    }
+
+    .my-experiences{
+        /* outline: 5px solid yellow !important; */
+        width: 100%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .experience-container h2{
+        /* outline: 6px solid green !important; */
+        margin-left: 0 !important;
+        margin-right: auto !important;
+        /* text-align: center; */
+    }
+
+    .experience-block, .experiences-list{
+        width: 90%;
+    }
+
     .hero-sect div, .hero-sect div div{
         margin-left: auto;
         margin-right: auto;
@@ -947,7 +995,8 @@ footer{
     }
 
     .experience-container .my-experiences div{
-        width: 99%;
+        width: 100%;
+        padding: 0;
     }
 
     .experiences-list{
@@ -972,6 +1021,12 @@ footer{
 
     .card-container{
         gap: 12rem;
+    }
+
+    footer p{
+        display: flex;
+        justify-content: center;
+        text-align: center;
     }
 }
 
@@ -1002,6 +1057,7 @@ footer{
 
     nav .nav-open{
         display: block;
+        right: 50px;
     }
 
     .list-container{
@@ -1072,6 +1128,7 @@ footer{
     }
 
     .nav-logo{
+        padding-top: 0.25em;
         justify-self: center;
     }
 
@@ -1082,7 +1139,11 @@ footer{
 
     .other-nav-items{
         justify-self: end;
-        margin-right: 10px !important;
+        margin-right: auto;
+        margin-left: auto;
+        margin-top: auto;
+        margin-bottom: 10px;
+
     }
     /**/
 
@@ -1149,7 +1210,7 @@ footer{
 
     .education-experience, .employment-experience{
         width: 100%;
-        margin: 15px;
+        margin: 10px;
     }
 
     .action-buttons{

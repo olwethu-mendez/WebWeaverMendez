@@ -8,7 +8,7 @@ const body = document.querySelector('body'),
     middleLine = document.querySelector('.middle-line'),
     bottomLine = document.querySelector('.bottom-line');
 
-    let getMode = localStorage.getItem("mode");
+    let getMode = window.localStorage.getItem("mode");
         if(getMode && getMode === "light-mode"){
             body.classList.add("light");
         }
@@ -21,9 +21,9 @@ const body = document.querySelector('body'),
     });
     
     if(!body.classList.contains("light")){
-        localStorage.setItem("mode", "dark-mode");
+        window.localStorage.setItem("mode", "dark-mode");
     }else{
-        localStorage.setItem("mode", "light-mode");
+        window.localStorage.setItem("mode", "light-mode");
     }
 
     // //toggling search box
@@ -53,6 +53,9 @@ const body = document.querySelector('body'),
 sidebarOpen.addEventListener('click', () =>{
     if(nav.classList.contains('active')){
         nav.classList.remove("active");
+        // topLine.style.transform = '';
+        // middleLine.style.transform = '';
+        // bottomLine.style.transform = '';
     }else{
         nav.classList.add("active");
     }
