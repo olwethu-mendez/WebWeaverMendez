@@ -8,7 +8,10 @@ const body = document.querySelector('body'),
     sidebarOpen = document.querySelector('.nav-open'),
     topLine = document.querySelector('.top-line'),
     middleLine = document.querySelector('.middle-line'),
-    bottomLine = document.querySelector('.bottom-line');
+    bottomLine = document.querySelector('.bottom-line'),
+    btnMoreInfo = document.querySelectorAll('.btn-more-info'),
+    cardElmnt = document.querySelectorAll('.card'),
+    closeCard = document.querySelectorAll('.close-back');
 
 const lightMode = () => {
     document.body.classList.add("light");
@@ -37,34 +40,7 @@ modeToggle.addEventListener("click", () =>{
     }
 });
 
-// if(!body.classList.contains("light")){
-// }else{
-// }
-
-// //toggling search box
-// searchToggle.addEventListener("click", () =>{
-//     searchToggle.classList.toggle("active");
-
-// });
-
     //sidebar toggle
-// if(nav.classList.contains("active")){
-//     sidebarClose.addEventListener("click", () =>{
-//         nav.classList.remove("active");
-//         // topLine.style.transform = 'rotate(-45deg)';
-//         // middleLine.style.display ='none';
-//         // bottomLine.style.transform = 'rotate(45deg)';
-//     })
-// }else{
-//     sidebarOpen.addEventListener("click", () =>{
-//         nav.classList.add("active");
-//         // topLine.style.transform = 'rotate(45deg)';
-//         // middleLine.style.display = 'block';
-//         // bottomLine.style.transform = 'rotate(-45deg)';
-//     })
-
-// }
-
 sidebarOpen.addEventListener('click', () =>{
     if(nav.classList.contains('active')){
         nav.classList.remove("active");
@@ -83,3 +59,14 @@ body.addEventListener("click", e =>{
         nav.classList.remove("active");
     }
 })
+
+//card info toggle
+
+for(let i = 0; i < btnMoreInfo.length; i++){
+    btnMoreInfo[i].addEventListener('click', () =>{
+        cardElmnt[i].classList.toggle('active')
+    })
+    closeCard[i].addEventListener('click', () =>{
+        cardElmnt[i].classList.remove('active');
+    })
+}
