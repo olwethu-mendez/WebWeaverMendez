@@ -711,6 +711,11 @@ main {
     height: auto;
 }
 
+.card-header, .card-title, .card-content, .btn-more-info{
+    left: 0;
+    right: 0;
+}
+
 .card hr{
     margin: 0;
     padding: 0;
@@ -1318,6 +1323,11 @@ footer{
         grid-auto-columns: 21%;
         overflow-x: auto;
         overscroll-behavior-inline: contain;
+        height: auto;
+    }
+
+    .card-container::-webkit-scrollbar{
+        width: auto;
     }
 
     .card-container::-webkit-scrollbar-track{
@@ -1335,9 +1345,10 @@ footer{
 
     .card{
         width:275px;
+        height: fit-content;
         background-color: var(--secondary-color--);
         text-align: center;
-        padding: 5px;
+        padding: 5px 5px 5px 5px;
         border-radius: 15px;
         box-shadow: var(--text-color--) 2px 2px 5px;
         padding-bottom: 15px;
@@ -1361,20 +1372,25 @@ footer{
     
     .card-case{
         width: 345px;
-        height: auto;
+        height: 550px;
     }
 
-    .card-container, .card-container-2 .card{
-        height: 515px;
+    .card-container .card, .card-container-2 .card{
+        min-height: 525px;
+        max-height: 550px;
     }
 
     .card-container{
-        gap: 12rem;
+        gap: 15rem;
+        height: fit-content;
     }
 
-    /* .card-content{
-        text-align: left;
-    } */
+    .card-header .card-title .card-content .btn-more-info{
+        padding: 5px 5px 0 5px;
+        position: absolute;
+        left: auto;
+        right: auto;
+    }
 
     .card-back p{
         transform: rotate(0deg) translateX(0px) translateY(15px);
@@ -1385,19 +1401,12 @@ footer{
         position: absolute;
         cursor: pointer;
         top: 5px;
-        transform: translateX(250px)
+        transform: translateX(250px);
     }
 
-    .card button{
+    .about-container .card button, .card-container-2 .card button{
         position: static;
-        bottom: auto;
-        margin-bottom: 5px;
-    }
-
-    .card-container-2 .card button{
-        position: static;
-        bottom: auto;
-        margin-bottom: 5px;
+        bottom: 5px;
     }
 
     .btn-show-all{
