@@ -596,7 +596,7 @@ main {
     background-color: var(--opaque-p-color--);
 }
 
-.card-container .card{
+.card-container .card, .card-container-2 .card{
     height: 500px;
 }
 
@@ -1079,46 +1079,10 @@ footer{
     .my-experiences{
         flex-direction: column;
     }
-    
-    .card-case{
-        width: 345px;
-        height: auto;
-    }
-
-    .card-container .card{
-        height: 515px;
-    }
-
-    .card-container{
-        gap: 12rem;
-    }
 
     .card-case .card.active{
         z-index: 200;
         transform: rotateY(180deg);
-    }
-
-    /* .card-content{
-        text-align: left;
-    } */
-
-    .card-back p{
-        transform: rotate(0deg) translateX(0px) translateY(15px);
-        padding: 5px;
-    }
-    
-    .card-back .close-back{
-        position: absolute;
-        cursor: pointer;
-        top: 5px;
-        transform: translateX(250px)
-    }
-
-    .card button{
-        position: absolute;
-        bottom: auto;
-        left: 0;
-        right: 0;
     }
 
     footer p{
@@ -1393,6 +1357,47 @@ footer{
         justify-content: center;
         position: relative;
         height: auto;
+    }
+    
+    .card-case{
+        width: 345px;
+        height: auto;
+    }
+
+    .card-container, .card-container-2 .card{
+        height: 515px;
+    }
+
+    .card-container{
+        gap: 12rem;
+    }
+
+    /* .card-content{
+        text-align: left;
+    } */
+
+    .card-back p{
+        transform: rotate(0deg) translateX(0px) translateY(15px);
+        padding: 5px;
+    }
+    
+    .card-back .close-back{
+        position: absolute;
+        cursor: pointer;
+        top: 5px;
+        transform: translateX(250px)
+    }
+
+    .card button{
+        position: static;
+        bottom: auto;
+        margin-bottom: 5px;
+    }
+
+    .card-container-2 .card button{
+        position: static;
+        bottom: auto;
+        margin-bottom: 5px;
     }
 
     .btn-show-all{
