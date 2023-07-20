@@ -527,6 +527,22 @@ main {
     padding-bottom: 0;
 }
 
+.dipIT::before, .advDipIT::before, .bzvRoles::before{
+    display: block;
+    content: "";
+    width: 45px;
+    height: 15px;
+    background-color: var(--secondary-color--);
+    border-radius: 5px;
+    padding: 3px 3px 5px 3px;
+    margin: 5px;
+    color: var(--primary-color--)
+}
+
+.dipIT::before{content: "2021";}
+.advDipIT::before{content: "2024";}
+.bzvRoles::before{content: "2023";}
+
 /* .my-projects{
     display: flex;
     flex-direction: column;
@@ -769,6 +785,10 @@ main {
     padding: 10px;
     /* outline: 3px solid green !important;
     z-index: 2; */
+}
+
+.contact-bars .contact-bar div{
+    pointer-events: none;
 }
 
 .contact-bar{
@@ -1085,6 +1105,10 @@ footer{
         flex-direction: column;
     }
 
+    .card-container{
+        gap: 20rem
+    }
+
     .card-case .card.active{
         z-index: 200;
         transform: rotateY(180deg);
@@ -1316,7 +1340,7 @@ footer{
     .card-container{
         margin: 0;
         padding: 0;
-        gap: 15rem;
+        gap: 16rem;
         padding: 15px;
         display: grid;
         grid-auto-flow: column;
@@ -1344,6 +1368,7 @@ footer{
     }
 
     .card{
+        /* outline: 1px solid red !important; */
         width:275px;
         height: fit-content;
         background-color: var(--secondary-color--);
@@ -1353,6 +1378,8 @@ footer{
         box-shadow: var(--text-color--) 2px 2px 5px;
         padding-bottom: 15px;
     }
+
+    /* .card-front{outline: 1px solid orange !important;z-index: 105;} */
     
     .card-header{
         height: 155.5px;
@@ -1371,7 +1398,7 @@ footer{
     }
     
     .card-case{
-        width: 345px;
+        width: 346px;
         height: 550px;
     }
 
@@ -1385,11 +1412,8 @@ footer{
         height: fit-content;
     }
 
-    .card-header .card-title .card-content .btn-more-info{
-        padding: 5px 5px 0 5px;
-        position: absolute;
-        left: auto;
-        right: auto;
+    .card-front{
+        transform: translateX(-5px);
     }
 
     .card-back p{
@@ -1404,9 +1428,15 @@ footer{
         transform: translateX(250px);
     }
 
-    .about-container .card button, .card-container-2 .card button{
-        position: static;
-        bottom: 5px;
+    .card-case .card.active{
+        z-index: 99;
+        transform: rotateY(180deg);
+    }
+
+    .btn-more-info{
+        position: absolute;
+        bottom: 5;
+        transform: translateX(5px);
     }
 
     .btn-show-all{
