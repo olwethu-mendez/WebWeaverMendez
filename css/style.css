@@ -596,7 +596,7 @@ main {
 
 .card-container::-webkit-scrollbar{
     height: 1rem;
-    width: 2rem;
+    width: 1px;
 }
 
 .card-container::-webkit-scrollbar-track{
@@ -624,6 +624,15 @@ main {
     justify-content: center;
     gap: 3rem;
     flex-wrap: wrap;
+}
+
+.card-images-container{
+    display: flex;
+    justify-content: center;
+    gap: 2.5rem;
+    flex-wrap: wrap;
+    width: fit-content;
+    height: fit-content;
 }
 
 .card-case{
@@ -671,8 +680,10 @@ main {
     transform: rotateY(180deg);
 }
 
-.card-back p{
-    transform: rotate(-90deg) translateX(-150px);
+.card-back .p{
+    transform: rotate(-90deg) translateX(-75px) translateY(-75px);
+    width: 475px;
+    text-align: left;
 }
 
 .card-back .close-back{
@@ -1110,8 +1121,15 @@ footer{
     }
 
     .card-case .card.active{
-        z-index: 200;
+        z-index: 99;
         transform: rotateY(180deg);
+    }
+
+    .card-back .p{
+        transform: rotate(0deg) translateX(0px) translateY(15px);
+        padding: 5px;
+        text-align: left;
+        width: 275px;
     }
 
     footer p{
@@ -1416,10 +1434,10 @@ footer{
         transform: translateX(-5px);
     }
 
-    .card-back p{
+    /* .card-back .p{
         transform: rotate(0deg) translateX(0px) translateY(15px);
         padding: 5px;
-    }
+    } */
     
     .card-back .close-back{
         position: absolute;

@@ -1,0 +1,37 @@
+.open-modal{
+    cursor: pointer;
+}
+
+.modal-wrapper {
+    position: fixed;
+    z-index: 205;
+    left: 0;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.4);
+    display: none;
+}
+
+.modal-content {
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 85%;
+    height: auto;
+    max-height: 95%;
+    padding: 20px;
+    border-radius: 5px;
+    background-color: #fefefe;
+    overflow: auto;
+}
+
+.modal-x {
+    position: fixed;
+    top: 0;
+    right: 0;
+    cursor: pointer;
+    margin: 7px;
+    font-size: 24px;
+}
