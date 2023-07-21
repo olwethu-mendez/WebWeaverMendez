@@ -635,6 +635,10 @@ main {
     height: fit-content;
 }
 
+.card-images-container img{
+    border-radius: 16px;
+}
+
 .card-case{
     width: 345px;
     height: 500px;
@@ -1129,7 +1133,7 @@ footer{
         transform: rotate(0deg) translateX(0px) translateY(15px);
         padding: 5px;
         text-align: left;
-        width: 275px;
+        width: 300px;
     }
 
     footer p{
@@ -1434,10 +1438,11 @@ footer{
         transform: translateX(-5px);
     }
 
-    /* .card-back .p{
-        transform: rotate(0deg) translateX(0px) translateY(15px);
+    .card-back .p{
+        /* transform: rotate(0deg) translateX(0px) translateY(15px); */
         padding: 5px;
-    } */
+        width: 275px;
+    }
     
     .card-back .close-back{
         position: absolute;
