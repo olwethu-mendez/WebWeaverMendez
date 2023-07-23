@@ -64,7 +64,7 @@ body.addEventListener("click", e =>{
 
 for(let i = 0; i < btnMoreInfo.length; i++){
     btnMoreInfo[i].addEventListener('click', () =>{
-        cardElmnt[i].classList.toggle('active')
+        cardElmnt[i].classList.add('active')
     })
     closeCard[i].addEventListener('click', () =>{
         cardElmnt[i].classList.remove('active');
