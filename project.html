@@ -7,6 +7,7 @@
     <link rel="icon" type="image/x-icon" href="img/WM.png"/>
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="assets/bootstrap-5/css/bootstrap-utilities.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@100;300;400;500;600;700&family=Poppins:wght@400;500&display=swap" rel="stylesheet">
@@ -16,7 +17,7 @@
     <title>Olwethu Mzileni</title>
 </head>
 <body>
-    <a href="#"><i class="fa-solid fa-arrow-up"></i></a>
+    <div class="arrow-container"><a href="#"><i class="bi bi-arrow-up"></i></a></div>
     <div class="container">
         <header>
             
@@ -60,172 +61,278 @@
         </header>
 
         <main>
-            <center><h1>Projects</h1></center>
+            <center><h1>Projects</h1></center><br/>
+            <div class="project-nav">
+                <a class="ui-nav open-project-nav">UI Design</a>
+                <a class="html-nav open-project-nav">Basic Web Projects</a>
+                <a class="asp-nav open-project-nav">ASP.Net Web App Projects</a>
+                <a class="python-nav open-project-nav">Python Projects</a>
+            </div>
             <div class="card-container-2">
-                <div class="card-case">
-                    <div class="card">
-                        <div class="card-front">
-                            <div class="card-header">
-                                <img src="img/e-nompilo.png"alt="card header image" width="100%" height="100%"/>
-                            </div>
-                            <div class="card-title">
-                                <h4>e-Nompilo Web App (3rd Year Project)</h4>
-                            </div>
-                            <hr/>
-                            <div class="card-content">
-                                <p>My third year project - a web system for a primary health care facility to better manage patient bookings, records, folders and appointments, and administrative services for the staff.</p>   
-                            </div>
-                            
-                            <button class="stnd-btn btn-more-info">Learn More</button>
-                            
-                        </div>
-                        <div class="card-back">
-                            <span class="close-back">×</span>
-                            <div class="p"><h4>eNompilo Web App</h4>
-                                <ul>
-                                <li><a class="name-color" href="" target="_blank">Github repo</a><br/></li>
-                                <li><i>Technology used:</i> <u>ASP.Net Core, MVC, MS SQL Server</u></li>
-                                <li><span class="name-color open-modal modal-link">See Images</span></li></ul>
-                            The project is an official, assigned project for my third year Project Module ONT3010. Using ASP.Net Core, specifically the MVC architecture, it is a primary health care system. Users (patients) can book appointment and receive prescriptions, among others, while health workers manage files and appointments.</div>
-                        </div>
-                    </div>
-                </div>
+                <div class="ui-page project-container">
+                    <a class="close-project-sect"><i class="bi bi-x"></i></a>
 
-                <!--Modal-->
-                <div class="card-image-wrapper">
-                    <div class="card-image-content">
-                        <div class="card-images-container">
-                            <img src="img/e-nompilo.png" width="350px">
-                            <!-- <img src="img/ClockApp/dayClock.png" width="350px">
-                            <img src="img/ClockApp/runningTimer.png" width="350px">
-                            <img src="img/ClockApp/setTimer.png" width="350px"> -->
+                    <div class="card-case project-card-case">
+                        <div class="card project-card">
+                            <div class="card-front">
+                                <div class="card-header">
+                                    <img src="img/UI/Tshangana Jewelers/tshangana jewelers (1).png"alt="card header image" width="100%" height="100%"/>
+                                </div>
+                                <div class="card-title">
+                                    <h4>Tshangana Jewelers Landing Page</h4>
+                                </div>
+                                <hr/>
+                                <div class="card-content">
+                                    <p>This design was my first venture into UI design using the platform figma. It is mainly just a design with no prototypes for an ecommerce project I had planned but had not yet began due to more pressing projects.</p>   
+                                </div>
+                                <div>
+                                    <button class="stnd-btn btn-more-info project-btn-more-info">Learn More</button>
+                                </div>
+                            </div>
+                            <div class="card-back">
+                                <span class="close-back"><i class="bi bi-x"></i></span>
+                                <div class="p"><h4>Tshangana Jewelers Design</h4>
+                                    <ul>
+                                    <li><a class="name-color" href="https://www.figma.com/file/fptbReDGZBphMWVHYtWiPb/Tshangana-Jewellers?type=design&t=3orOfkN4ZtvsycUP-6" target="_blank">Figma link</a><br/></li>
+                                    <li><span class="name-color open-modal modal-link">See Images</span></li></ul>
+                                The project was my first venture into UI design. I had started taking tutorials on figma and after designing a whole site based on files given by the instructer, I followed up with this little project as a test to see if I had grasped the fundamentals of what I had learned. It was a basic project as I had not learned prototyping then.</div>
+                            </div>
                         </div>
                     </div>
-                </div>
-                
-                <div class="card-case">
-                    <div class="card">
-                        <div class="card-front">
-                            <div class="card-header">
-                                <img src="img/CalculatorApp.png"alt="card header image" width="100%" height="100%"/>
+    
+                    <!--Modal-->
+                    <div class="card-image-wrapper">
+                        <div class="card-image-content">
+                            <div class="card-images-container">
+                                <img src="img/UI/Tshangana Jewelers/tshangana jewelers (1).png" width="350px">
+                                <img src="img/UI/Tshangana Jewelers/tshangana jewelers (2).png" width="350px">
+                                <img src="img/UI/Tshangana Jewelers/tshangana jewelers (3).png" width="350px">
+                                <img src="img/UI/Tshangana Jewelers/tshangana jewelers (4).png" width="350px">
+                                <img src="img/UI/Tshangana Jewelers/tshangana jewelers (5).png" width="350px">
+                                <img src="img/UI/Tshangana Jewelers/tshangana jewelers (6).png" width="350px">
+                                <img src="img/UI/Tshangana Jewelers/tshangana jewelers (7).png" width="350px">
                             </div>
-                            <div class="card-title">
-                                <h4>Calculator App (CSS/JS Practice Project)</h4>
-                            </div>
-                            <hr/>
-                            <div class="card-content">
-                                <p>This Calculator App is a CSS & JS practice project. It's a calculator app with basic arithrmetic functions. It's an ongoing project I'll update it to perform more complex arithmetic functions.</p>   
-                            </div>
-                            <div>
-                                <button class="stnd-btn btn-more-info">Learn More</button>
-                            </div>
-                        </div>
-                        <div class="card-back">
-                            <span class="close-back">×</span>
-                            <div class="p"><h4>Calculator App</h4>
-                                <ul>
-                                <li><a class="name-color" href="https://github.com/s220428336/CalculatorApp" target="_blank">Github repo</a><br/></li>
-                                <li><i>Technology used:</i> <u>HTML, CSS, JavaScript</u></li>
-                                <li><span class="name-color open-modal modal-link">See Images</span></li></ul>
-                            The project is a JavaScript practice project. Using basic arithmetic functions, it serves as a basic calculator that performs simple calculations (addition, subtraction, multiplication and division). As previously mentioned, I intend to use further mathematical functions to make it calculate more complex calculations.</div>
                         </div>
                     </div>
-                </div>
 
-                <!--Modal-->
-                <div class="card-image-wrapper">
-                    <div class="card-image-content">
-                        <div class="card-images-container">
-                            <img src="img/CalculatorApp.png" width="350px">
-                            <!-- <img src="img/ClockApp/dayClock.png" width="350px">
-                            <img src="img/ClockApp/runningTimer.png" width="350px">
-                            <img src="img/ClockApp/setTimer.png" width="350px"> -->
+                    <div class="card-case project-card-case">
+                        <div class="card project-card">
+                            <div class="card-front">
+                                <div class="card-header">
+                                    <img src="img/UI/eNompilo/eNompilo (1).png"alt="card header image" width="100%" height="100%"/>
+                                </div>
+                                <div class="card-title">
+                                    <h4>eNompilo Web App (initial design)</h4>
+                                </div>
+                                <hr/>
+                                <div class="card-content">
+                                    <p>This design was for my third year project, the eNompilo Web App. While it was an initial design, the project itself has since evolved to meet the growing or unanticipated requirements that came about.</p>   
+                                </div>
+                                <div>
+                                    <button class="stnd-btn btn-more-info project-btn-more-info">Learn More</button>
+                                </div>
+                            </div>
+                            <div class="card-back">
+                                <span class="close-back"><i class="bi bi-x"></i></span>
+                                <div class="p"><h4>eNompilo Web App Design</h4>
+                                    <ul>
+                                    <li><a class="name-color" href="https://www.figma.com/file/7hhvikxkEpVo1s38Uxg1fO/e-Nompilontle-site?type=design&t=3orOfkN4ZtvsycUP-6" target="_blank">Figma link</a><br/></li>
+                                    <li><span class="name-color open-modal modal-link">See Images</span></li></ul>
+                                The design was my second attempt at UI design and Figma, and my first ever attempt at prototyping. I had to grasp a lot of consepts quicker while working on this design, especially prototyping, plugins and components, all of which came in handy for a project as complex as this one. It may have been the project that helped me understand and love Figma.</div>
+                            </div>
                         </div>
                     </div>
-                </div>
-                
-                <div class="card-case">
-                    <div class="card">
-                        <div class="card-front">
-                            <div class="card-header">
-                                <img src="img/ClockApp.png"alt="card header image" width="100%" height="100%"/>
+    
+                    <!--Modal-->
+                    <div class="card-image-wrapper">
+                        <div class="card-image-content">
+                            <div class="card-images-container">
+                                <img src="img/UI/eNompilo/eNompilo (1).png" width="350px">
+                                <img src="img/UI/eNompilo/eNompilo (2).png" width="350px">
+                                <img src="img/UI/eNompilo/eNompilo (3).png" width="350px">
+                                <img src="img/UI/eNompilo/eNompilo (4).png" width="350px">
+                                <img src="img/UI/eNompilo/eNompilo (5).png" width="350px">
+                                <img src="img/UI/eNompilo/eNompilo (6).png" width="350px">
                             </div>
-                            <div class="card-title">
-                                <h4>Clock App (JavaScript Practice Project)</h4>
-                            </div>
-                            <hr/>
-                            <div class="card-content">
-                                <p>This Clock App is a javascript practice project. It serves to tell time as an analogue clock and has the additional features of a stopwatch and a timer. It's background alos reflects the time of day</p>   
-                            </div>
-                            <div>
-                                <button class="stnd-btn btn-more-info">Learn More</button>
-                            </div>
-                        </div>
-                        <div class="card-back">
-                            <span class="close-back">×</span>
-                            <div class="p"><h4>Clock App</h4>
-                                <ul>
-                                <li><a class="name-color" href="https://github.com/s220428336/ClockApp.git" target="_blank">Github repo</a><br/></li>
-                                <li><i>Technology used:</i> <u>HTML, CSS, JavaScript</u></li>
-                                <li><span class="name-color open-modal modal-link">See Images</span></li></ul>
-                            This project is a practice project for CSS and JavaScript. It serves as a clock, stopwatch and timer and its most challenging feat is its dynamically changing background. At day time,the clock assumes the colour of the sun and the background, the colour of the sky. At night, it assumes the colour of the moon and the background, the colour of the night sky.</div>
                         </div>
                     </div>
-                </div>
 
-                <!--Modal-->
-                <div class="card-image-wrapper">
-                    <div class="card-image-content">
-                        <div class="card-images-container">
-                            <img src="img/ClockApp.png" width="350px">
-                            <img src="img/ClockApp/dayClock.png" width="350px">
-                            <img src="img/ClockApp/runningTimer.png" width="350px">
-                            <img src="img/ClockApp/setTimer.png" width="350px">
-                        </div>
-                    </div>
                 </div>
+                <div class="html-page project-container">
+                    <a class="close-project-sect"><i class="bi bi-x"></i></a>
+                        <div class="card-case project-card-case">
+                            <div class="card project-card">
+                                <div class="card-front">
+                                    <div class="card-header">
+                                        <img src="img/CalculatorApp.png"alt="card header image" width="100%" height="100%"/>
+                                    </div>
+                                    <div class="card-title">
+                                        <h4>Calculator App (CSS/JS Practice Project)</h4>
+                                    </div>
+                                    <hr/>
+                                    <div class="card-content">
+                                        <p>This Calculator App is a CSS & JS practice project. It's a calculator app with basic arithrmetic functions. It's an ongoing project I'll update it to perform more complex arithmetic functions.</p>   
+                                    </div>
+                                    <div>
+                                        <button class="stnd-btn btn-more-info project-btn-more-info">Learn More</button>
+                                    </div>
+                                </div>
+                                <div class="card-back">
+                                    <span class="close-back"><i class="bi bi-x"></i></span>
+                                    <div class="p"><h4>Calculator App</h4>
+                                        <ul>
+                                        <li><a class="name-color" href="https://github.com/s220428336/CalculatorApp" target="_blank">Github repo</a><br/></li>
+                                        <li><i>Technology used:</i> <u>HTML, CSS, JavaScript</u></li>
+                                        <li><span class="name-color open-modal modal-link">See Images</span></li></ul>
+                                    The project is a JavaScript practice project. Using basic arithmetic functions, it serves as a basic calculator that performs simple calculations (addition, subtraction, multiplication and division). As previously mentioned, I intend to use further mathematical functions to make it calculate more complex calculations.</div>
+                                </div>
+                            </div>
+                        </div>
+        
+                        <!--Modal-->
+                        <div class="card-image-wrapper">
+                            <div class="card-image-content">
+                                <div class="card-images-container">
+                                    <img src="img/CalculatorApp.png" width="350px">
+                                    <!-- <img src="img/ClockApp/dayClock.png" width="350px">
+                                    <img src="img/ClockApp/runningTimer.png" width="350px">
+                                    <img src="img/ClockApp/setTimer.png" width="350px"> -->
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="card-case project-card-case">
+                            <div class="card project-card">
+                                <div class="card-front">
+                                    <div class="card-header">
+                                        <img src="img/ClockApp.png"alt="card header image" width="100%" height="100%"/>
+                                    </div>
+                                    <div class="card-title">
+                                        <h4>Clock App (JavaScript Practice Project)</h4>
+                                    </div>
+                                    <hr/>
+                                    <div class="card-content">
+                                        <p>This Clock App is a javascript practice project. It serves to tell time as an analogue clock and has the additional features of a stopwatch and a timer. It's background alos reflects the time of day</p>   
+                                    </div>
+                                    <div>
+                                        <button class="stnd-btn btn-more-info project-btn-more-info">Learn More</button>
+                                    </div>
+                                </div>
+                                <div class="card-back">
+                                    <span class="close-back"><i class="bi bi-x"></i></span>
+                                    <div class="p"><h4>Clock App</h4>
+                                        <ul>
+                                        <li><a class="name-color" href="https://github.com/s220428336/ClockApp.git" target="_blank">Github repo</a><br/></li>
+                                        <li><i>Technology used:</i> <u>HTML, CSS, JavaScript</u></li>
+                                        <li><span class="name-color open-modal modal-link">See Images</span></li></ul>
+                                    This project is a practice project for CSS and JavaScript. It serves as a clock, stopwatch and timer and its most challenging feat is its dynamically changing background. At day time,the clock assumes the colour of the sun and the background, the colour of the sky. At night, it assumes the colour of the moon and the background, the colour of the night sky.</div>
+                                </div>
+                            </div>
+                        </div>
+        
+                        <!--Modal-->
+                        <div class="card-image-wrapper">
+                            <div class="card-image-content">
+                                <div class="card-images-container">
+                                    <img src="img/ClockApp.png" width="350px">
+                                    <img src="img/ClockApp/dayClock.png" width="350px">
+                                    <img src="img/ClockApp/runningTimer.png" width="350px">
+                                    <img src="img/ClockApp/setTimer.png" width="350px">
+                                </div>
+                            </div>
+                        </div>
+        
+                        <div class="card-case project-card-case">
+                            <div class="card projec-card">
+                                <div class="card-front">
+                                    <div class="card-header">
+                                        <img src="img/WebWeaverMendez.png"alt="card header image" width="100%" height="100%"/>
+                                    </div>
+                                    <div class="card-title">
+                                        <h4>WebWeaverMendez (Professional Portfolio)</h4>
+                                    </div>
+                                    <hr/>
+                                    <div class="card-content">
+                                        <p>This is my portfolio. It's also an ongoing project (a static site that needs constant updating and improving). It will mainly showcase my skills, experiences, qualifications and projects.</p>
+                                    </div>
+                                    <div>
+                                        <button class="stnd-btn btn-more-info project-btn-more-info">Learn More</button>
+                                    </div>
+                                </div>
+                                <div class="card-back">
+                                    <span class="close-back"><i class="bi bi-x"></i></span>
+                                    <div class="p"><h4>WebWeaverMendez</h4>
+                                        <ul>
+                                        <li><a class="name-color" href="https://github.com/s220428336/WebWeaverMendez" target="_blank">Github repo</a><br/></li>
+                                        <li><i>Technology used:</i> <u>HTML, CSS, JavaScript</u></li>
+                                        <li><span class="name-color open-modal modal-link">See Images</span></li></ul>
+                                        This is an ongoing project, my professional portfolio, which is created initially using HTML, CSS & JavaScript. It’s currently a static site, hosted in github pages, displaying my professional and educational experiences and qualifications, along with my completed projects. Having designed and developed the portfolio from scratch, it also acts as a showcase of my development skills.</div>
+                                </div>
+                            </div>
+                        </div>
+        
+                        <!--Modal-->
+                        <div class="card-image-wrapper">
+                            <div class="card-image-content">
+                                <div class="card-images-container">
+                                    <img src="img/WebWeaverMendez.png" width="350px">
+                                    <!-- <img src="img/ClockApp/dayClock.png" width="350px">
+                                    <img src="img/ClockApp/runningTimer.png" width="350px">
+                                    <img src="img/ClockApp/setTimer.png" width="350px"> -->
+                                </div>
+                            </div>
+                        </div>
+                </div>
+                <div class="asp-page project-container">
+                    <a class="close-project-sect"><i class="bi bi-x"></i></a>
+                        <div class="card-case project-card-case">
+                            <div class="card project-card">
+                                <div class="card-front">
+                                    <div class="card-header">
+                                        <img src="img/e-nompilo.png"alt="card header image" width="100%" height="100%"/>
+                                    </div>
+                                    <div class="card-title">
+                                        <h4>e-Nompilo Web App (3rd Year Project)</h4>
+                                    </div>
+                                    <hr/>
+                                    <div class="card-content">
+                                        <p>My third year project - a web system for a primary health care facility to better manage patient bookings, records, folders and appointments, and administrative services for the staff.</p>   
+                                    </div>
+                                    
+                                    <button class="stnd-btn btn-more-info project-btn-more-info">Learn More</button>
+                                    
+                                </div>
+                                <div class="card-back">
+                                    <span class="close-back"><i class="bi bi-x"></i></span>
+                                    <div class="p"><h4>eNompilo Web App</h4>
+                                        <ul>
+                                        <li><a class="name-color" href="" target="_blank">Github repo</a><br/></li>
+                                        <li><i>Technology used:</i> <u>ASP.Net Core, MVC, MS SQL Server</u></li>
+                                        <li><span class="name-color open-modal modal-link">See Images</span></li></ul>
+                                    The project is an official, assigned project for my third year Project Module ONT3010. Using ASP.Net Core, specifically the MVC architecture, it is a primary health care system. Users (patients) can book appointment and receive prescriptions, among others, while health workers manage files and appointments.</div>
+                                </div>
+                            </div>
+                        </div>
+        
+                        <!--Modal-->
+                        <div class="card-image-wrapper">
+                            <div class="card-image-content">
+                                <div class="card-images-container">
+                                    <img src="img/e-nompilo.png" width="350px">
+                                    <!-- <img src="img/ClockApp/dayClock.png" width="350px">
+                                    <img src="img/ClockApp/runningTimer.png" width="350px">
+                                    <img src="img/ClockApp/setTimer.png" width="350px"> -->
+                                </div>
+                            </div>
+                        </div>
+                </div>
+                <div class="python-page project-container">
+                    <a class="close-project-sect"><i class="bi bi-x"></i></a>
 
-                <div class="card-case">
-                    <div class="card">
-                        <div class="card-front">
-                            <div class="card-header">
-                                <img src="img/WebWeaverMendez.png"alt="card header image" width="100%" height="100%"/>
-                            </div>
-                            <div class="card-title">
-                                <h4>WebWeaverMendez (Professional Portfolio)</h4>
-                            </div>
-                            <hr/>
-                            <div class="card-content">
-                                <p>This is my portfolio. It's also an ongoing project (a static site that needs constant updating and improving). It will mainly showcase my skills, experiences, qualifications and projects.</p>
-                            </div>
-                            <div>
-                                <button class="stnd-btn btn-more-info">Learn More</button>
-                            </div>
-                        </div>
-                        <div class="card-back">
-                            <span class="close-back">×</span>
-                            <div class="p"><h4>WebWeaverMendez</h4>
-                                <ul>
-                                <li><a class="name-color" href="https://github.com/s220428336/WebWeaverMendez" target="_blank">Github repo</a><br/></li>
-                                <li><i>Technology used:</i> <u>HTML, CSS, JavaScript</u></li>
-                                <li><span class="name-color open-modal modal-link">See Images</span></li></ul>
-                                This is an ongoing project, my professional portfolio, which is created initially using HTML, CSS & JavaScript. It’s currently a static site, hosted in github pages, displaying my professional and educational experiences and qualifications, along with my completed projects. Having designed and developed the portfolio from scratch, it also acts as a showcase of my development skills.</div>
-                        </div>
-                    </div>
                 </div>
+            </div>
 
-                <!--Modal-->
-                <div class="card-image-wrapper">
-                    <div class="card-image-content">
-                        <div class="card-images-container">
-                            <img src="img/WebWeaverMendez.png" width="350px">
-                            <!-- <img src="img/ClockApp/dayClock.png" width="350px">
-                            <img src="img/ClockApp/runningTimer.png" width="350px">
-                            <img src="img/ClockApp/setTimer.png" width="350px"> -->
-                        </div>
-                    </div>
-                </div>
-            </div>    
+            
         </main>
     </div>
     <footer class="project-footer">

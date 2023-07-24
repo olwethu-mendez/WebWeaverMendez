@@ -10,10 +10,17 @@ const body = document.querySelector('body'),
     middleLine = document.querySelector('.middle-line'),
     bottomLine = document.querySelector('.bottom-line'),
     btnMoreInfo = document.querySelectorAll('.btn-more-info'),
+    btnMoreInfo2 = document.querySelectorAll('.project-btn-more-info'),
     cardElmnt = document.querySelectorAll('.card'),
+    cardElmnt2 = document.querySelectorAll('.project-card'),
     cardContainer = document.querySelector('.card-container'),
+    cardContainer2 = document.querySelector('.project-container'),
     cardCase = document.querySelectorAll('.card-case'),
-    closeCard = document.querySelectorAll('.close-back');
+    cardCase2 = document.querySelectorAll('.project-card-case'),
+    closeCard = document.querySelectorAll('.close-back'),
+    openProjectNav = document.querySelectorAll('.open-project-nav'),
+    projectContainer = document.querySelectorAll('.project-container');
+    closeProjectSection = document.querySelectorAll('.close-project-sect')
 
 const lightMode = () => {
     document.body.classList.add("light");
@@ -69,11 +76,13 @@ for(let i = 0; i < btnMoreInfo.length; i++){
         cardElmnt[i].classList.add('active');
         cardCase[i].classList.add('expand');
         cardContainer.classList.add('expand');
+        cardContainer2[i].classList.add('expand');
     })
     closeCard[i].addEventListener('click', () =>{
         cardElmnt[i].classList.remove('active');
         cardCase[i].classList.remove('expand');
         cardContainer.classList.remove('expand');
+        cardContainer2[i].classList.remove('expand');
     })
 
     cardCase[i].addEventListener("click", (e) => {
@@ -81,6 +90,46 @@ for(let i = 0; i < btnMoreInfo.length; i++){
             cardElmnt[i].classList.remove('active');
             cardCase[i].classList.remove('expand');
             cardContainer.classList.remove('expand');
+            cardContainer2[i].classList.remove('expand');
         }
+    })
+}
+
+for(let j = 0; j < cardContainer2.length; j++){
+    for(let i = 0; i < btnMoreInfo2.length; i++){
+        btnMoreInfo2[i].addEventListener('click', () =>{
+            cardElmnt2[i].classList.add('active');
+            cardCase2[i].classList.add('expand');
+            cardContainer2[j].classList.add('expand');
+        })
+        closeCard2[i].addEventListener('click', () =>{
+            cardElmnt2[i].classList.remove('active');
+            cardCase2[i].classList.remove('expand');
+            cardContainer2[j].classList.remove('expand');
+        })
+
+        cardCase2[i].addEventListener("click", (e) => {
+            if(e.target === cardCase2[i]){
+                cardElmnt2[i].classList.remove('active');
+                cardCase2[i].classList.remove('expand');
+                cardContainer2[j].classList.remove('expand');
+            }
+        })
+    }
+}
+
+//toggle project nav
+for(let i = 0; i < openProjectNav.length; i++){
+    openProjectNav[i].addEventListener("click", () =>{
+        for(let j = 0; j < projectContainer.length; j++){
+            projectContainer[j].style.display = "none";
+            openProjectNav[j].classList.remove('active')
+        }
+        projectContainer[i].style.display = "flex";
+        openProjectNav[i].classList.add('active')
+    })
+    closeProjectSection[i].addEventListener("click", () =>{
+        projectContainer[i].style.display = "none";
+        openProjectNav[i].classList.remove('active')
     })
 }
