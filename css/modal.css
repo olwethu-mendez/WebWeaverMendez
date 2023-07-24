@@ -4,7 +4,7 @@
 
 .modal-wrapper {
     position: fixed;
-    z-index: 205;
+    z-index: 406;
     left: 0;
     top: 0;
     width: 100vw;
@@ -34,4 +34,5 @@
     cursor: pointer;
     margin: 7px;
     font-size: 24px;
+    color: red;
 }

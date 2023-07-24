@@ -11,6 +11,8 @@ const body = document.querySelector('body'),
     bottomLine = document.querySelector('.bottom-line'),
     btnMoreInfo = document.querySelectorAll('.btn-more-info'),
     cardElmnt = document.querySelectorAll('.card'),
+    cardContainer = document.querySelector('.card-container'),
+    cardCase = document.querySelectorAll('.card-case'),
     closeCard = document.querySelectorAll('.close-back');
 
 const lightMode = () => {
@@ -64,9 +66,21 @@ body.addEventListener("click", e =>{
 
 for(let i = 0; i < btnMoreInfo.length; i++){
     btnMoreInfo[i].addEventListener('click', () =>{
-        cardElmnt[i].classList.add('active')
+        cardElmnt[i].classList.add('active');
+        cardCase[i].classList.add('expand');
+        cardContainer.classList.add('expand');
     })
     closeCard[i].addEventListener('click', () =>{
         cardElmnt[i].classList.remove('active');
+        cardCase[i].classList.remove('expand');
+        cardContainer.classList.remove('expand');
+    })
+
+    cardCase[i].addEventListener("click", (e) => {
+        if(e.target === cardCase[i]){
+            cardElmnt[i].classList.remove('active');
+            cardCase[i].classList.remove('expand');
+            cardContainer.classList.remove('expand');
+        }
     })
 }

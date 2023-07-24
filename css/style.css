@@ -20,6 +20,7 @@
     --logo-color--: #BDC3C7;
     --site-name-color--: #E9DFE0;
     --text-hover-color--: rgba(255,255,255, 0.5);
+    --constant-text-color: #E9DFE0;
 }
 
 body{
@@ -51,6 +52,8 @@ body{
 }
 
 .bi-arrow-up{
+    padding: 3px;
+    background-color: rgba(128, 128, 128, 0.05);
     position: fixed;
     right: 2%;
     bottom: 2%;
@@ -135,7 +138,7 @@ nav .nav-open{
     height: 3px;
     background-color: var(--text-color--);
 
-    transition: transform 350ms ease-in-out, opacity 200ms linear;
+    transition: transform 350ms ease-in-out, opacity 100ms linear;
 }
 
 .top-line, .bottom-line{
@@ -157,6 +160,7 @@ nav.active .nav-open{
 }
 
 nav.active .nav-open .middle-line{
+    transform: rotate(0deg) translateX(-7px) !important;
     /* top: 0; */opacity: 0;
 }
 
@@ -270,6 +274,7 @@ nav .other-nav-items{
     background-color: var(--primary-color--);
     transform: rotate(-45deg);
     z-index: -1;
+    color: var(--constant-text-color);
 }
 
 .search-field input{
@@ -399,7 +404,7 @@ main {
     border: 0;
     font-weight: 500;
     gap: 2rem;
-    color: #E9DFE0;
+    color: var(--constant-text-color);
     background-color: var(--primary-color--);
 }
 
@@ -413,16 +418,13 @@ main {
     justify-content: center;
 }
 
-.btn-my-cv{
+.btn-about{
     color: var(--text-color--);
     background-color: var(--secondary-color--);
 }
 
-.btn-my-cv:hover{
+.btn-about:hover{
     background-color: var(--opaque-s-color--);
-}
-
-.about-container{
 }
 
 .about-information{
@@ -458,6 +460,7 @@ main {
 .skill-text{
     position: relative;
     z-index: 3;
+    color: var(--constant-text-color);
 }
 
 .filled-bar{
@@ -527,21 +530,23 @@ main {
     padding-bottom: 0;
 }
 
-.dipIT::before, .advDipIT::before, .bzvRoles::before{
+.dipIT::before, .advDipIT::before, .bzvRoles::before, .faoRoles::before{
     display: block;
     content: "";
-    width: 45px;
+    /* width: 45px; */
     height: 15px;
     background-color: var(--secondary-color--);
     border-radius: 5px;
     padding: 3px 3px 5px 3px;
-    margin: 5px;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
     color: var(--primary-color--)
 }
 
-.dipIT::before{content: "2021";}
+.dipIT::before{content: "2021 - 2023";}
 .advDipIT::before{content: "2024";}
 .bzvRoles::before{content: "2023";}
+.faoRoles::before{content: "2023";}
 
 /* .my-projects{
     display: flex;
@@ -573,8 +578,8 @@ main {
 }
 
 .card-container{
-    margin-left: 35px;
-    margin-right: 35px;
+    margin-left: 15px;
+    margin-right: 15px;
     gap: 6rem;
     padding: 15px 0 15px 0;
     display: grid;
@@ -663,8 +668,32 @@ main {
 }
 
 .card-case .card.active{
-    z-index: 200;
     transform: rotate(90deg) rotateY(180deg);
+}
+
+.card-container.expand{
+    position: relative;
+    width: 100vw;
+    height: 100%;
+    z-index: 400;
+}
+
+.card-container.expand .card-case.expand{
+    position: absolute;
+    width: 100vw;
+    height: inherit;
+    left: 0;
+    top: 0;
+    z-index: 402;
+    background-color: var(--opaque-s-color--);
+}
+
+.card-container.expand .card.active{
+    position: absolute;
+    left: 0;
+    right: 0;
+    transition: all 1.5s linear;
+    z-index: 405;
 }
 
 .card-front, .card-back{
@@ -695,6 +724,7 @@ main {
     cursor: pointer;
     top: 5px;
     left: 5px;
+    z-index: 405;
 }
 /* 
 .card-front .card-header{
@@ -819,6 +849,11 @@ main {
     font-weight: 500;
     text-align: center;
     padding: 15px;
+    color: var(--constant-text-color)
+}
+
+.contact-bar div, .contact-bar div i{
+    color: var(--constant-text-color) !important;
 }
 
 .contact-icons{
@@ -985,8 +1020,8 @@ footer{
     }
 
     .card-container{
-        margin-left: 55px;
-        margin-right: 55px;
+        margin-left: 25px;
+        margin-right: 25px;
         gap: 8rem;
         padding: 15px;
         display: grid;
@@ -1127,6 +1162,12 @@ footer{
     .card-case .card.active{
         z-index: 99;
         transform: rotateY(180deg);
+    }
+    
+    .card-back .close-back{
+        position: absolute;
+        cursor: pointer;
+        transform: translateX(305px);
     }
 
     .card-back .p{
@@ -1369,7 +1410,7 @@ footer{
         grid-auto-columns: 21%;
         overflow-x: auto;
         overscroll-behavior-inline: contain;
-        height: auto;
+        height: fit-content;
     }
 
     .card-container::-webkit-scrollbar{
@@ -1431,7 +1472,8 @@ footer{
 
     .card-container{
         gap: 15rem;
-        height: fit-content;
+        height: 595px;
+        overflow-y: hidden;
     }
 
     .card-front{
@@ -1447,7 +1489,6 @@ footer{
     .card-back .close-back{
         position: absolute;
         cursor: pointer;
-        top: 5px;
         transform: translateX(250px);
     }
 
