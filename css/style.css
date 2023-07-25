@@ -625,7 +625,7 @@ main {
     background-color: var(--opaque-p-color--);
 }
 
-.card-container .card, .project-container .card{
+.card{
     height: 500px;
 }
 
@@ -690,11 +690,11 @@ main {
 .project-container.expand{
     position: relative;
     width: 100vw;
-    height: 100%;
+    height: 100vh;
     z-index: 400;
 }
 
-.card-container.expand .card-case.expand{
+.card-case.expand{
     position: absolute;
     width: 100vw;
     height: inherit;
@@ -714,20 +714,13 @@ main {
     background-color: var(--opaque-s-color--);
 }
 
-.card-container.expand .card.active{
+.card.active{
     position: absolute;
     left: 0;
     right: 0;
     transition: all 1.5s linear;
     z-index: 405;
-}
-
-.project-container.expand .project-card.active{
-    position: absolute;
-    left: 0;
-    right: 0;
-    transition: all 1.5s linear;
-    z-index: 405;
+    scale: 1.1;
 }
 
 .card-front, .card-back{
@@ -981,6 +974,7 @@ footer{
 }
 
 .open-project-nav{
+    font-weight: 600;
     color: var(--link-color--);
     padding: 5px;
     margin-top: auto;
@@ -1560,7 +1554,7 @@ footer{
         height: 550px;
     }
 
-    .card-container .card, .project-container .card{
+    .card{
         min-height: 525px;
         max-height: 550px;
     }
