@@ -697,7 +697,7 @@ main {
 .card-case.expand{
     position: absolute;
     width: 100vw;
-    height: inherit;
+    height: 100vh;
     left: 0;
     top: 0;
     z-index: 402;
@@ -707,7 +707,7 @@ main {
 .project-container.expand .project-card-case.expand{
     position: absolute;
     width: 100vw;
-    height: inherit;
+    height: 100vh;
     left: 0;
     top: 0;
     z-index: 402;
@@ -720,7 +720,6 @@ main {
     right: 0;
     transition: all 1.5s linear;
     z-index: 405;
-    scale: 1.1;
 }
 
 .card-front, .card-back{
