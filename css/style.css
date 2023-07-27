@@ -20,7 +20,8 @@
     --logo-color--: #BDC3C7;
     --site-name-color--: #E9DFE0;
     --text-hover-color--: rgba(255,255,255, 0.5);
-    --constant-text-color: #E9DFE0;
+    --constant-text-color: rgb(233, 223, 224);
+    --opaque-c-t-color: rgba(233, 223, 224, 0.5);
 }
 
 body{
@@ -194,7 +195,7 @@ nav .other-nav-items{
     position: relative;
 }
 
-.other-nav-items .bg-mode, .other-nav-items .searchToggle{
+.other-nav-items .bg-mode{
     display: flex;
     align-items: center;
     justify-content: center;
@@ -202,7 +203,7 @@ nav .other-nav-items{
     z-index: 1; */
 }
 
-.bg-mode i, .searchToggle i{
+.bg-mode i{
     position: absolute;
     color: var(--text-color--);
     cursor: pointer;
@@ -222,79 +223,6 @@ nav .other-nav-items{
 .bg-mode.active .bi-sun{
     opacity: 0;
     pointer-events: none;
-}
-
-.searchToggle .close{
-    opacity: 0;
-    pointer-events: none;
-}
-
-.searchToggle.active .close{
-    opacity: 1;
-    pointer-events: auto;
-}
-
-.searchToggle.active .bi-search{
-    opacity: 0;
-    pointer-events: none;
-}
-
-.search-bar{
-    position: relative;
-}
-
-.search-bar .search-field{
-    position: absolute;
-    bottom: -85px;
-    right: 5px;
-    height: 50px;
-    width: 300px;
-    display: flex;
-    align-items: center;
-    padding: 3px;
-    border-radius: 6px;
-    box-shadow: 0 5px 5px rgba(0, 0, 0, 0.1);
-    opacity: 0;
-    pointer-events: none;
-    transition: all 0.3s ease;
-}
-
-.searchToggle.active ~ .search-field{
-    bottom: -75px;
-    opacity: 1;
-    pointer-events: auto;
-}
-
-.search-field::before{
-    content: '';
-    position: absolute;
-    right: 14px;
-    top: -4px;
-    height: 12px;
-    width: 12px;
-    background-color: var(--primary-color--);
-    transform: rotate(-45deg);
-    z-index: -1;
-    color: var(--constant-text-color);
-}
-
-.search-field input{
-    height: 100px;
-    width: 100%;
-    padding: 0 45px 0 15px;
-    outline: none;
-    border: none;
-    border-radius: 4px;
-    font-weight: 400;
-    color: #211718;
-}
-
-.search-field i{
-    position: absolute;
-    color: var(--primary-color--);
-    right: 15px;
-    font-size: 1.7rem;
-    cursor: pointer;
 }
 
 .list-container {
@@ -573,6 +501,69 @@ main {
     margin: 0;
 }
 
+.my-services{
+    width: 100%;
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.my-services h3{
+    width: 100vw;
+    text-align: center;
+}
+
+.service-card-container{
+    margin-top: 60px;
+    align-self: normal;
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    gap: 3rem;
+    margin-bottom: 30px;
+}
+
+.service-card{
+    padding: 5px 5px 5px 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items:center;
+    width: 250px;
+    height: 225px;
+    background-color: var(--secondary-color--);
+    border-radius: 16px;
+    box-shadow: 5px 5px 10px var(--text-color--);
+}
+
+.service-card:hover{
+    scale: 1.1;
+    box-shadow: 5px 5px 10px var(--primary-color--);
+}
+
+.service-card:hover .rounded-icon-con{
+    scale: 1.5;
+}
+
+.rounded-icon-con{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 65px;
+    height: 65px;
+    border-radius: 50%;
+    background-color: var(--primary-color--);
+    position: relative;
+}
+
+.service-card i{
+    font-size: 32px;
+    color: var(--constant-text-color)
+}
+
 .my-projects{
     display: flex;
     flex-direction: column;
@@ -745,6 +736,12 @@ main {
     text-align: left;
 }
 
+.project-card .card-back .p{
+    transform: rotate(-90deg) translateX(-100px) translateY(-75px);
+    width: 475px;
+    text-align: left;
+}
+
 .card-back .close-back{
     position: absolute;
     cursor: pointer;
@@ -879,7 +876,11 @@ main {
 }
 
 .contact-bar div, .contact-bar div i{
-    color: var(--constant-text-color) !important;
+    color: var(--constant-text-color);
+}
+
+.contact-bar div:hover, .contact-bar div i:hover{
+    color: var(--opaque-c-t-color);
 }
 
 .contact-icons{
@@ -986,6 +987,7 @@ footer{
 
 .project-container{
     position: relative;
+    min-height: 550px
 }
 
 .close-project-sect{
@@ -1245,6 +1247,13 @@ footer{
         width: 300px;
     }
 
+    .project-card .card-back .p{
+        transform: rotate(0deg) translateX(0px) translateY(15px);
+        padding: 5px;
+        text-align: left;
+        width: 300px;
+    }
+
     .card.active{
         transform: translateY(20px);
     }
@@ -1259,16 +1268,16 @@ footer{
         border-bottom: 2px solid var(--body-color--);
         width: 100vw;
         text-align: center;
-        margin-top: auto;
-        margin-bottom: auto;
+        justify-self: center;
     }
 
     .project-nav{
         flex-direction: column;
-        justify-content: center;
+        justify-content:space-evenly;
         align-items: center;
         gap: 1rem;
         padding: 0;
+        
     }
 
     .close-project-sect{
@@ -1492,6 +1501,46 @@ footer{
         padding-bottom: 5px;
     }
 
+    .service-card-container{
+        margin-top: 20px;
+        align-self: normal;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        flex-wrap: wrap;
+        gap: 3rem;
+    
+    }
+    
+    .service-card{
+        padding: 5px 5px 5px 5px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items:center;
+        width: 100%;
+        height: 225px;
+        background-color: var(--secondary-color--);
+        border-radius: 16px;
+    }
+
+    .rounded-icon-con{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        width: 80px;
+        height: 80px;
+        border-radius: 50%;
+        background-color: var(--primary-color--);
+        position: relative;
+    }
+    
+    .service-card i{
+        font-size: 48px;
+        color: var(--constant-text-color)
+    }
+
     .card-container{
         margin: 0;
         padding: 0;
@@ -1574,6 +1623,11 @@ footer{
 
     .card-back .p{
         /* transform: rotate(0deg) translateX(0px) translateY(15px); */
+        padding: 5px;
+        width: 275px;
+    }
+
+    .project-card .card-back .p{
         padding: 5px;
         width: 275px;
     }
