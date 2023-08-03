@@ -778,6 +778,10 @@ main {
     box-shadow: #a43acb 2px 2px 5px;
 }
 
+.card-case:hover .card{
+    scale: 1.05;
+}
+
 .card-header{
     height: 195px;
 }
