@@ -128,11 +128,13 @@ nav .nav-open{
     position: absolute;
     top: 1.5em;
     right: 80px;
+    cursor: pointer;
+    /* outline: 3px solid green !important;
+    pointer-events: auto !important; */
 }
 
 .toggle-lines{
     display: block;
-    position: relative;
 }
 
 .top-line, .middle-line, .bottom-line{
@@ -162,12 +164,14 @@ nav.active .nav-open{
 }
 
 nav.active .nav-open .middle-line{
-    transform: rotate(0deg) translateX(-7px) !important;
+    transform: rotate(0deg)  !important;
     /* top: 0; */opacity: 0;
+    transition: all .25s ease-in-out;
 }
 
 nav.active .nav-open .toggle-lines{
-    transform: rotate(45deg) translate(-14px);
+    transform: rotate(45deg) translate(-8px, -6px);
+    pointer-events: none;
 }
 
 /* nav.active .nav-open .middle-line{
@@ -176,7 +180,7 @@ nav.active .nav-open .toggle-lines{
 
 nav.active .nav-open .bottom-line{
     /* bottom: 0; */
-    transform: rotate(-45deg) translate(-14px);
+    transform: rotate(-45deg) translate(-8px, 6px);
 }
 
 .list-container .logo-toggle{
@@ -465,7 +469,7 @@ main {
     padding-bottom: 0;
 }
 
-.dipIT::before, .advDipIT::before, .bzvRoles::before, .faoRoles::before{
+.roleYear::before{
     display: block;
     content: "";
     /* width: 45px; */
@@ -482,6 +486,11 @@ main {
 .advDipIT::before{content: "2024";}
 .bzvRoles::before{content: "2023";}
 .faoRoles::before{content: "2023";}
+.nmuAssistRoles::before{content: "2023";}
+
+.sub-bold{
+    font-weight: 500;
+}
 
 /* .my-projects{
     display: flex;
@@ -666,7 +675,7 @@ main {
     background-color: var(--secondary-color--);
     text-align: center;
     border-radius: 15px;
-    box-shadow: var(--text-color--) 2px 2px 5px;
+    box-shadow: var(--text-color--) 0 2px 5px;
     padding-bottom: 15px;
     transition: transform 1.5s ease-in-out;
     /* transition: all 0.5s ease; */
@@ -1040,6 +1049,7 @@ footer{
     nav .nav-open{
         right: 150px;
         display: block;
+        pointer-events: auto;
     }
 
     .nav-logo{
@@ -1142,6 +1152,7 @@ footer{
     nav .nav-open{
         display: block;
         justify-self: start;
+        pointer-events: auto;
     }
 
     .desk-logo, .mob-logo{
@@ -1323,6 +1334,7 @@ footer{
     nav .nav-open{
         display: block;
         right: 50px;
+        pointer-events: auto;
     }
 
     .list-container{
