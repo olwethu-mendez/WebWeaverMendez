@@ -456,6 +456,14 @@ main {
     z-index: 3; */
 }
 
+.list-of-expeirences{
+    list-style: none;
+    text-indent: -2.5rem;
+}
+.list-of-expeirences li{
+    text-indent: -1.5rem;
+}
+
 .experience-block{
     width: 100%;
     height: auto;
