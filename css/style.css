@@ -562,6 +562,10 @@ main {
     transition: all 500ms ease-in-out;
 }
 
+.service-card p{
+    color: var(--link-color--)
+}
+
 .service-card:hover{
     scale: 1.05;
     box-shadow: var(--primary-color--) 0 2px 5px;
@@ -580,7 +584,11 @@ main {
     scale: 1.25;
     border-radius: 50%;
     position: absolute;
-    transition: all 1s ease-in-out;
+    transition: all 0.5s ease-in-out;
+}
+
+.service-card:hover b{
+    color: var(--logo-color--);
 }
 
 .rounded-icon-con{
