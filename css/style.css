@@ -386,9 +386,9 @@ main {
     box-shadow: 1px 1px 3px var(--text-color--);
 }
 
-.full-bar:hover{
+/* .full-bar:hover{
     box-shadow: 1px 1px 3px #a43acb;
-}
+} */
 
 .skill-text{
     position: relative;
@@ -558,16 +558,29 @@ main {
     height: 225px;
     background-color: var(--secondary-color--);
     border-radius: 16px;
-    box-shadow: 5px 5px 10px var(--text-color--);
+    box-shadow: var(--text-color--) 0 2px 5px;
+    transition: all 500ms ease-in-out;
 }
 
 .service-card:hover{
-    scale: 1.1;
-    box-shadow: 5px 5px 10px var(--primary-color--);
+    scale: 1.05;
+    box-shadow: var(--primary-color--) 0 2px 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    /* transform: rotateY(1turn); */
 }
 
 .service-card:hover .rounded-icon-con{
-    scale: 1.5;
+    top: -17%;
+    /* width: 97.5px;
+    height: 97.5px;
+    font-size: 48px; */
+    scale: 1.25;
+    border-radius: 50%;
+    position: absolute;
+    transition: all 1s ease-in-out;
 }
 
 .rounded-icon-con{
@@ -585,6 +598,16 @@ main {
 .service-card i{
     font-size: 32px;
     color: var(--constant-text-color)
+}
+
+.service-card p{
+    text-align: center;
+    font-size: 14px;
+    display: none;
+}
+
+.service-card:hover p{
+    display: block;
 }
 
 .my-projects{
@@ -796,9 +819,9 @@ main {
 
 
 
-.card:hover{
+/* .card:hover{
     box-shadow: #a43acb 2px 2px 5px;
-}
+} */
 
 .card-case:hover .card{
     scale: 1.05;
@@ -1022,11 +1045,15 @@ footer{
     min-height: 550px
 }
 
+.card-container-2.bg-active{
+    background-color: var(--opaque-s-color--);
+}
+
 .close-project-sect{
     position: absolute;
     top: 0;
     right: 0;
-    transform: translateX(-50px) translateY(-25px);
+    transform: translateX(-10px) translateY(-55px);
 }
 
 .bi-x{
@@ -1323,7 +1350,7 @@ footer{
     }
 
     .close-project-sect{
-        transform: translateX(0px) translateY(-25px);
+        transform: translateX(-10px) translateY(-55px);
     }
 }
 

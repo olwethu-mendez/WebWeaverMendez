@@ -14,7 +14,7 @@ const body = document.querySelector('body'),
     cardElmnt = document.querySelectorAll('.card'),
     cardElmnt2 = document.querySelectorAll('.project-card'),
     cardContainer = document.querySelector('.card-container'),
-    cardContainer2 = document.querySelector('.project-container'),
+    cardContainer2 = document.querySelector('.card-container-2'),
     cardCase = document.querySelectorAll('.card-case'),
     // cardCase2 = document.querySelectorAll('.project-card-case'),
     closeCard = document.querySelectorAll('.close-back'),
@@ -124,12 +124,15 @@ for(let i = 0; i < openProjectNav.length; i++){
         for(let j = 0; j < projectContainer.length; j++){
             projectContainer[j].style.display = "none";
             openProjectNav[j].classList.remove('active')
+            cardContainer2.classList.remove('bg-active')
         }
         projectContainer[i].style.display = "flex";
         openProjectNav[i].classList.add('active')
+        cardContainer2.classList.add('bg-active')
     })
     closeProjectSection[i].addEventListener("click", () =>{
         projectContainer[i].style.display = "none";
         openProjectNav[i].classList.remove('active')
+        cardContainer2.classList.remove('bg-active')
     })
 }
