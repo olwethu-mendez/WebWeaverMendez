@@ -1613,10 +1613,42 @@ footer{
         background-color: var(--primary-color--);
         position: relative;
     }
+
+    
+
+    .service-card{
+        margin-top: 50px;
+        scale: 1.05;
+        box-shadow: var(--primary-color--) 0 2px 5px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+        /* transform: rotateY(1turn); */
+    }
+
+    .service-card .rounded-icon-con{
+        top: -17%;
+        /* width: 97.5px;
+        height: 97.5px;
+        font-size: 48px; */
+        scale: 1.25;
+        border-radius: 50%;
+        position: absolute;
+        transition: all 0.5s ease-in-out;
+    }
+
+    .service-card b{
+        color: var(--logo-color--);
+    }
     
     .service-card i{
         font-size: 48px;
         color: var(--constant-text-color)
+    }
+
+    .service-card p{
+        display: block;
     }
 
     .card-container{
