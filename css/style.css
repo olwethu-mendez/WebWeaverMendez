@@ -1798,6 +1798,7 @@ footer{
         border-radius: 50%;
         position: absolute;
         transition: all 0.5s ease-in-out;
+        z-index: 500;
     }
 
     .service-card b{
