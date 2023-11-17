@@ -928,7 +928,7 @@ main {
     justify-content: center;
     align-items: center;
     border-radius: 15px;
-    width: 75%;
+    width: 100%;
     height: 75%;
     background-color: var(--primary-color--);
     font-size: larger;
@@ -940,6 +940,10 @@ main {
 
 .contact-bar div, .contact-bar div i{
     color: var(--constant-text-color);
+}
+
+.location-bar, .email-bar, .phone-bar{
+    width: 70vw !important;
 }
 
 .contact-bar div:hover, .contact-bar div i:hover{
@@ -1050,7 +1054,7 @@ footer{
 
 .project-container{
     position: relative;
-    min-height: 550px
+    min-height: 550px;
 }
 
 .card-container-2.bg-active{
@@ -1784,7 +1788,7 @@ footer{
     }
 
     .action-buttons{
-        width: 100%;
+        width: 100vw !important;
     }
 
     .stnd-btn{
@@ -1794,7 +1798,7 @@ footer{
 
     .action-buttons .stnd-btn{
         margin: 0;
-        width: 95%;
+        width: 95vw !important;
         border-radius: 5px;
     }
 
