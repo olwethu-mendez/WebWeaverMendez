@@ -699,10 +699,10 @@ main {
     border-radius: 16px;
 }
 
-.card-images-container:hover img{
-    scale: 2.75;
+.card-images-container img:hover{
+    scale: 2.25;
+    z-index: 500;
 }
-
 .card-case{
     width: 345px;
     height: 500px;
