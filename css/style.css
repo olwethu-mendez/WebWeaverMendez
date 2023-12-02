@@ -704,9 +704,9 @@ main {
     scale: 2.25;
     z-index: 500;
     position:absolute;
-    top:50%;
-    left:50%;
-    transform: translate(-50%, -50%);
+    top:15%;
+    left:0;
+    right:0;
 }
 .card-case{
     width: 345px;
