@@ -138,6 +138,7 @@ for(let i = 0; i < openProjectNav.length; i++){
     })
 }
 
+document.addEventListener('DOMContentLoaded', function(){
 function clockTick() {
     let currentDate = new Date();
     let year = currentDate.getFullYear();
@@ -148,3 +149,4 @@ function clockTick() {
   
   // here we run the clockTick function every 1000ms (1 second)
   setInterval(clockTick, 43200000);
+});
