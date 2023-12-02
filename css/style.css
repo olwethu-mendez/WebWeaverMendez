@@ -699,7 +699,7 @@ main {
     border-radius: 16px;
 }
 
-.card-images-container img:hover{
+.card-images-container:hover img{
     scale: 2.75;
 }
 
