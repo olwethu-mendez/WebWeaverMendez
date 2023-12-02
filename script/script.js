@@ -19,7 +19,8 @@ const body = document.querySelector('body'),
     // cardCase2 = document.querySelectorAll('.project-card-case'),
     closeCard = document.querySelectorAll('.close-back'),
     openProjectNav = document.querySelectorAll('.open-project-nav'),
-    projectContainer = document.querySelectorAll('.project-container');
+    projectContainer = document.querySelectorAll('.project-container'),
+    copyYear = document.querySelector('.copyYear');
     closeProjectSection = document.querySelectorAll('.close-project-sect')
 
 const lightMode = () => {
@@ -136,3 +137,13 @@ for(let i = 0; i < openProjectNav.length; i++){
         cardContainer2.classList.remove('bg-active')
     })
 }
+
+function clockTick() {
+    var currentYear = new Date(),
+        year = currentYear.getFullYear();
+    // here we get the element with the id of "date" and change the content to the text variable we made above
+    copyYear.innerHtml = year;
+  }
+  
+  // here we run the clockTick function every 1000ms (1 second)
+  setInterval(clockTick, 43200000);

@@ -699,6 +699,10 @@ main {
     border-radius: 16px;
 }
 
+.card-images-container img:hover{
+    scale: 2.75;
+}
+
 .card-case{
     width: 345px;
     height: 500px;
