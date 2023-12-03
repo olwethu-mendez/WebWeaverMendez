@@ -703,10 +703,8 @@ main {
 .card-images-container img:hover{
     scale: 2.25;
     z-index: 500;
-    position:absolute;
-    top:2%;
-    left:0;
-    right:0;
+    justify-self: center;
+    align-items: center;
 }
 .card-case{
     width: 345px;

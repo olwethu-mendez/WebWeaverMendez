@@ -138,15 +138,13 @@ for(let i = 0; i < openProjectNav.length; i++){
     })
 }
 
-document.addEventListener('DOMContentLoaded', function(){
 function clockTick() {
     let currentDate = new Date();
     let year = currentDate.getFullYear();
     // here we get the element with the id of "date" and change the content to the text variable we made above
-    document.getElementById('homeCopyYear').innerHTML = year;
-    document.getElementById('projectCopyYear').innerHTML = year;
+    document.querySelector('#homeCopyYear').innerHTML = year;
+    document.querySelector('#projectCopyYear').innerHTML = year;
   }
   
   // here we run the clockTick function every 1000ms (1 second)
   setInterval(clockTick, 43200000);
-});
