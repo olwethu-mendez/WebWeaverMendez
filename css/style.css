@@ -704,8 +704,6 @@ main {
     scale: 2.25;
     z-index: 500;
     justify-self: center;
-    justify-items: center;
-    align-items: center;
     align-self: center;
 }
 .card-case{
