@@ -140,7 +140,7 @@ for(let i = 0; i < openProjectNav.length; i++){
 
 function clockTick() {
     let currentDate = new Date();
-    let year = currentDate.getFullYear();
+    let year = currentDate.getFullYear().toString();
     // here we get the element with the id of "date" and change the content to the text variable we made above
     document.querySelector('#homeCopyYear').innerHTML = year;
     document.querySelector('#projectCopyYear').innerHTML = year;
