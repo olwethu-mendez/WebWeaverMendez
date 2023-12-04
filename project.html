@@ -487,11 +487,13 @@
         </main>
     </div>
     <footer class="project-footer">
-        <p>&copy; 2023 <span id="projectCopyYear"></span> - All Rights Reserved</p> <!--See if you can use JS innerHTML and the year updates automatically-->
+        <p>&copy; <span id="projectCopyYear"></span> - All Rights Reserved</p> <!--See if you can use JS innerHTML and the year updates automatically-->
     </footer>
     <script src="script/script.js"></script>
     <script>
         modal(".open-modal", ".card-image-wrapper", ".card-image-content", true)
+        let year = new Date().getFullYear();
+        document.getElementById('projectCopyYear').innerHTML = year;
     </script>
 </body>
 </html>
