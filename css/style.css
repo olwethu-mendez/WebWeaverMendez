@@ -693,7 +693,7 @@ main {
     flex-wrap: wrap;
     width: fit-content;
     height: fit-content;
-    position: relative;
+    /*position: relative;*/
 }
 
 .card-images-container img{
