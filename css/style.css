@@ -707,9 +707,8 @@ main {
     align-self: center;
     position: absolute;
     left: 50%;
-    margin-left: -50%;
-    top: 50%;
-    margin-top: -50;
+    right: 50%;
+    top: 7.5%;
 }
 .card-case{
     width: 345px;
