@@ -278,9 +278,6 @@ main {
     font-size: 32px;
     display: flex;
     gap: 1.5rem;
-    justify-self: center;
-    align-self: center;
-    justify-content: center;
 }
 
 .bi-twitter{
@@ -708,8 +705,11 @@ main {
     z-index: 500;
     justify-self: center;
     align-self: center;
-    transform-style: preserve-3d;
-    transform: translateZ(500px);
+    position: absolute;
+    left: 50%;
+    margin-left: -50%;
+    top: 50%;
+    margin-top: -50;
 }
 .card-case{
     width: 345px;

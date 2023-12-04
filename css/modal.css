@@ -19,7 +19,8 @@
     left: 50%;
     transform: translate(-50%, -50%);
     width: 85%;
-    height: auto;
+    /*height: auto;*/
+    height: 95%;
     max-height: 95%;
     padding: 20px;
     border-radius: 5px;
