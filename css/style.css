@@ -1522,7 +1522,7 @@ footer{
     }
 
     .hero-sect{
-        flex-direction: column;
+        flex-direction: column-reverse;
         margin-top: 0;
         padding-top: 0;
     }
@@ -1543,6 +1543,11 @@ footer{
 
     .hero-information, .hero-illustration, .about-information, .my-skills, .experiences-illustration, .education-experience, .employment-experience, .contact-bars, .email-me{
         width: 100%;
+    }
+
+    .hero-illustration img{
+        box-shadow: 0 0 15px --primary-color--;
+        border-radius: 360px;
     }
 
     .hero-sect, .about-container, .experience-container, .contact-me{
