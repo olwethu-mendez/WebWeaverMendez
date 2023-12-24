@@ -261,12 +261,12 @@ main {
 }
 
 .hero-information{
-    width: 60%;
+    width: 50%;
     margin: 10px;
 }
 
 .hero-illustration{
-    width: 40%;
+    width: 50%;
     margin: 10px;
 }
 
@@ -1299,7 +1299,7 @@ footer{
 
     .hero-sect{
         display: flex;
-        flex-direction: column;
+        flex-direction: column-reverse;
     }
 
     .my-skills{
