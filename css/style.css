@@ -1546,8 +1546,10 @@ footer{
     }
 
     .hero-illustration img{
-        box-shadow: 0 0 15px --primary-color--;
+        box-shadow: 0 0 15px var(--primary-color--);
         border-radius: 360px;
+        background: var(--secondary-color--);
+        width: 65%;
     }
 
     .hero-sect, .about-container, .experience-container, .contact-me{
