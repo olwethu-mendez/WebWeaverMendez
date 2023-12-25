@@ -1293,11 +1293,11 @@ footer{
 
     .hero-illustration img{
         border-radius: 50% 50% 100% 50%;
-        background-color: var(--primary-color--);
+        background-color: var(--opaque-s-color--);
         width: 85%;
         /*align-self: center;
         justify-self: center;*/
-        border-bottom: 3px solid var(--secondary-color--);
+        border-bottom: 3px solid var(--primary-color--);
     }
 
     .experience-container .my-experiences div{
