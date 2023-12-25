@@ -1546,7 +1546,7 @@ footer{
     }
 
     .hero-illustration img{
-        border-radius: 360px;
+        border-radius: 15px 95px;
         background-color: var(--secondary-color--);
         width: 95%;
         align-self: center;
