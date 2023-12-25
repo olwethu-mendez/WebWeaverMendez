@@ -1546,12 +1546,12 @@ footer{
     }
 
     .hero-illustration img{
-        border-radius: 15px 95px;
+        border-radius: 180px 180px 360px 180px;
         background-color: var(--secondary-color--);
         width: 95%;
         align-self: center;
         justify-self: center;
-        box-shadow: 0 0 15 rgba(0, 0, 0, 0.5);
+        border-bottom: 3px solid var(--primary-color--);
     }
 
     .hero-sect, .about-container, .experience-container, .contact-me{
