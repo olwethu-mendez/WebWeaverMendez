@@ -1550,7 +1550,8 @@ footer{
         background-color: var(--secondary-color--);
         width: 65%;
         align-self: center;
-        box-shadow: 0 0 15;
+        justify-self: center;
+        box-shadow: 0 0 15 rgba(0, 0, 0, 0.5);
     }
 
     .hero-sect, .about-container, .experience-container, .contact-me{
