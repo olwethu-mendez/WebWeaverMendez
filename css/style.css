@@ -1292,12 +1292,12 @@ footer{
     }
 
     .hero-illustration img{
-        border-radius: 50% 50% 360px 50%;
-        background-color: var(--secondary-color--);
+        border-radius: 50% 50% 100% 50%;
+        background-color: var(--primary-color--);
         width: 85%;
         /*align-self: center;
         justify-self: center;*/
-        border-bottom: 3px solid var(--primary-color--);
+        border-bottom: 3px solid var(--secondary-color--);
     }
 
     .experience-container .my-experiences div{
