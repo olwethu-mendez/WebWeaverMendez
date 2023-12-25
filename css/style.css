@@ -1285,6 +1285,21 @@ footer{
         width: 90%;
     }
 
+    .hero-illustration{
+        display: flex;
+        justify-content: center;
+        align-items: center; 
+    }
+
+    .hero-illustration img{
+        border-radius: 270px 270px 360px 270px;
+        background-color: var(--secondary-color--);
+        width: 85%;
+        /*align-self: center;
+        justify-self: center;*/
+        border-bottom: 3px solid var(--primary-color--);
+    }
+
     .experience-container .my-experiences div{
         width: 100%;
         padding: 0;
@@ -1543,15 +1558,6 @@ footer{
 
     .hero-information, .hero-illustration, .about-information, .my-skills, .experiences-illustration, .education-experience, .employment-experience, .contact-bars, .email-me{
         width: 100%;
-    }
-
-    .hero-illustration img{
-        border-radius: 180px 180px 360px 180px;
-        background-color: var(--secondary-color--);
-        width: 95%;
-        align-self: center;
-        justify-self: center;
-        border-bottom: 3px solid var(--primary-color--);
     }
 
     .hero-sect, .about-container, .experience-container, .contact-me{
