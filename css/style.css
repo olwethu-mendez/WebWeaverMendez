@@ -640,9 +640,7 @@ main {
 .stack-sect .card-container {
     gap: 2.5%;
     background: var(--opaque-s-color--);
-    width: 100vw;
-    position: absolute;
-    left: -10%;
+    padding: 0 180px;
 }
 
 .snaps-inline{
