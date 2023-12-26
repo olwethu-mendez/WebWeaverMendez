@@ -649,10 +649,10 @@ main {
     gap: 2rem;
     background: var(--opaque-s-color--);
     margin: 0;
-    margin-left: -10% !important;
+    /*margin-left: -10% !important;*/
     padding: 30px 15px;
     position: absolute;
-    left: -5;
+    left: 0;
 }
 
 .snaps-inline{
