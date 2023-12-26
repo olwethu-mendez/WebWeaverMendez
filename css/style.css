@@ -651,6 +651,8 @@ main {
     margin: 0;
     margin-left: -10% !important;
     padding: 30px 15px;
+    position: absolute;
+    left: -10;
 }
 
 .snaps-inline{
