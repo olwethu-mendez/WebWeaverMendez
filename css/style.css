@@ -637,16 +637,12 @@ main {
     /* transform-style: preserve-3d; */
 }
 
-.stack-sect{
-    padding-left: 0;
-    margin-left: 0;
-    padding-right: 0;
-    margin-right: 0;
-}
-
 .stack-sect .card-container {
-    gap: 2.5%;
-    background: var(--opaque-s-color--);;
+    gap: 2.5rem;
+    background: var(--opaque-s-color--);
+    margin-left: 7px;
+    margin-right: 7px;
+    padding: 7px 0 7px 0;
 }
 
 .snaps-inline{
