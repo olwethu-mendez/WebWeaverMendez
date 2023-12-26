@@ -642,7 +642,7 @@ main {
     background: var(--opaque-s-color--);
     width: 100vw;
     position: absolute;
-    left: -5%;
+    left: -15%;
 }
 
 .snaps-inline{
