@@ -645,6 +645,7 @@ main {
 }
 
 .stack-sect .card-container {
+    width: 100vw;
     gap: 2rem;
     background: var(--opaque-s-color--);
     margin: 0;
