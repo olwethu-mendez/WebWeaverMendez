@@ -637,6 +637,11 @@ main {
     /* transform-style: preserve-3d; */
 }
 
+.stack-sect .card-container {
+    gap: 5%;
+    background: var(--opaque-s-color--);
+}
+
 .snaps-inline{
     scroll-snap-type: inline mandatory;
     scroll-padding-inline: -7px;
@@ -658,17 +663,28 @@ main {
     width: 1px;
 }
 
+.stack-sect .card-container::-webkit-scrollbar{
+    display: none;
+}
+
 .card-container::-webkit-scrollbar-track{
     background-color: var(--opaque-s-color--);
     padding: 1px;
     border-radius: 5px;
+}
 
+.stack-sect .card-container::-webkit-scrollbar-track{
+    display: none;
 }
 
 .card-container::-webkit-scrollbar-thumb{
     border-radius: 15px;
     border: 1px solid var(--secondary-color--);
     background-color: var(--opaque-p-color--);
+}
+
+.stack-sect .card-container::-webkit-scrollbar-thumb{
+    display: none;
 }
 
 .card{
