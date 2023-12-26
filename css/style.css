@@ -649,6 +649,7 @@ main {
     gap: 2rem;
     background: var(--opaque-s-color--);
     margin: 0;
+    margin-left: -20px;
     padding: 30px 15px;
 }
 
