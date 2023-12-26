@@ -641,6 +641,8 @@ main {
     gap: 2.5%;
     background: var(--opaque-s-color--);
     width: 100vw;
+    position: absolute;
+    left: 0;
 }
 
 .snaps-inline{
