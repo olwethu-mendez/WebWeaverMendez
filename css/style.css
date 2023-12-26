@@ -648,7 +648,7 @@ main {
     gap: 2rem;
     background: var(--opaque-s-color--);
     margin: 0;
-    padding: 15px 7px;
+    padding: 30px 15px;
 }
 
 .snaps-inline{
@@ -1681,6 +1681,14 @@ footer{
         overflow-x: auto;
         overscroll-behavior-inline: contain;
         height: fit-content;
+    }
+
+    .stack-sect .card-container {
+        gap: 2rem;
+        background: var(--opaque-s-color--);
+        margin: 0;
+        padding: 30px 15px;
+        height: auto;
     }
 
     .card-container::-webkit-scrollbar{
