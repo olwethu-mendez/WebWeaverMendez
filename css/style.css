@@ -646,7 +646,7 @@ main {
 
 .stack-sect .card-container {
     width: 100vw;
-    gap: 2rem;
+    gap: 32px;
     background: var(--opaque-s-color--);
     margin: 0;
     /*margin-left: -10% !important;*/
@@ -656,7 +656,7 @@ main {
 }
 
 .stack-sect .card-container img {
-    height: 18px;
+    height: 32px;
 }
 
 .snaps-inline{
@@ -1692,7 +1692,7 @@ footer{
     }
 
     .stack-sect .card-container {
-        gap: 8rem;
+        gap: 32px;
         background: var(--opaque-s-color--);
         margin: 0;
         padding: 30px 15px;
