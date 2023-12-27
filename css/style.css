@@ -642,6 +642,7 @@ main {
     margin-right: 0;
     padding-left: 0;
     padding-right: 0;
+    margin-bottom: 64px;
 }
 
 .stack-sect .card-container {
@@ -650,7 +651,7 @@ main {
     background: var(--opaque-s-color--);
     margin: 0;
     /*margin-left: -10% !important;*/
-    padding: 30px 180px;
+    padding: 30px 90px;
     position: absolute;
     left: 0;
 }
