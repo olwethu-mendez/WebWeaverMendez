@@ -1688,7 +1688,7 @@ footer{
     }
 
     .stack-sect .card-container {
-        gap: 2rem;
+        gap: 8rem;
         background: var(--opaque-s-color--);
         margin: 0;
         padding: 30px 15px;
