@@ -897,14 +897,8 @@ main {
 
 .card-header a i{
     position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-100%, -100%)
-    display: none;
-}
-
-.card-header:hover + .card-header a i{
-    display: block;
+    top: 0;
+    right: 0;
 }
 
 .card-header img{
