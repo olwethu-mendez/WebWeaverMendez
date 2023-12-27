@@ -286,7 +286,7 @@ main {
 
 .bi-twitter:hover{
     color: rgba(29, 161, 242, 0.5) !important;/*Try it as rgba with opacity*/
-}
+    }
 
 .bi-instagram{
     background-image: linear-gradient(to bottom right, #405DE6, #5B51D8, #833AB4, #C13584, #E1306C, #FD1D1D, #F56040, #F77737, #FCAF45, #FFDC80) !important;
@@ -650,9 +650,13 @@ main {
     background: var(--opaque-s-color--);
     margin: 0;
     /*margin-left: -10% !important;*/
-    padding: 30px 30px;
+    padding: 30px 180px;
     position: absolute;
     left: 0;
+}
+
+.stack-sect h3{
+    margin: 180px;
 }
 
 .stack-sect .card-container img {
