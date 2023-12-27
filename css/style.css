@@ -650,9 +650,13 @@ main {
     background: var(--opaque-s-color--);
     margin: 0;
     /*margin-left: -10% !important;*/
-    padding: 30px 15px;
+    padding: 30px 30px;
     position: absolute;
     left: 0;
+}
+
+.stack-sect .card-container img {
+    height: 13px;
 }
 
 .snaps-inline{
