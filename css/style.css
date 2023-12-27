@@ -889,6 +889,11 @@ main {
     height: 195px;
 }
 
+.card-header a{
+    padding: 0;
+    margin: 0;
+}
+
 .card-header img{
     border-top-right-radius: 13px;
     border-top-left-radius: 13px;
