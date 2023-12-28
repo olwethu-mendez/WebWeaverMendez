@@ -1874,10 +1874,12 @@ footer{
         flex-direction: column;
         justify-content: space-evenly;
         align-items: center;
+        position: relative;
         /* transform: rotateY(1turn); */
     }
 
     .service-card .rounded-icon-con{
+        position: absolute;
         top: -17%;
         /* width: 97.5px;
         height: 97.5px;
