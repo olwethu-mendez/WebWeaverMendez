@@ -1887,8 +1887,8 @@ footer{
         scale: 1.25;
         border-radius: 50%;
         position: absolute;
-        /*transition: all 0.5s ease-in-out;
-        z-index: 500;*/
+        /*transition: all 0.5s ease-in-out;*/
+        z-index: 50
     }
 
     .service-card b{
