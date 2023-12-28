@@ -899,7 +899,7 @@ main {
 .card-header a i{
     position: absolute;
     top: 0;
-    right: 0;
+    right: 50%;
 }
 
 .card-header img{
