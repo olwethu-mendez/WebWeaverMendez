@@ -148,3 +148,20 @@ function clockTick() {
   
   // here we run the clockTick function every 1000ms (1 second)
   setInterval(clockTick, 43200000);
+
+  let prevBtn = document.getElementById('prevBtn');
+let nextBtn = document.getElementById('nextBtn');
+let container = document.querySelector('.card-container');
+let items = container.children;
+let itemWidth = items[0].offsetWidth; // assuming all items have the same width
+let containerWidth = container.offsetWidth;
+
+prevBtn.addEventListener('click', function() {
+   if (container.scrollLeft === 0) return;
+   container.scrollLeft -= itemWidth;
+});
+
+nextBtn.addEventListener('click', function() {
+   if (container.scrollLeft + containerWidth >= container.scrollWidth) return;
+   container.scrollLeft += itemWidth;
+});

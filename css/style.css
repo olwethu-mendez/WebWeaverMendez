@@ -257,6 +257,9 @@ main {
 }
 
 .hero-sect{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
     position: relative;
 }
 
@@ -673,6 +676,31 @@ main {
 .snaps-inline > *{
     scroll-snap-align: center;
 }
+
+.stack-sect .pre-container{
+    height: 100%;
+    position: relative;
+}
+
+#prevBtn, #nextBtn {
+    position: absolute;
+    transform: translateY(45%);
+    background-color: rgba(85, 85, 85, .25);
+    color: white;
+    padding: 12px 24px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+ }
+ 
+ #prevBtn {
+    left: 10px;
+ }
+ 
+ #nextBtn {
+    right: 10px;
+ }
+ 
 
 .card-container-2{
     width: 100%;
@@ -1903,5 +1931,10 @@ footer{
     .service-card p{
         display: block;
     }
+
+    #prevBtn, #nextBtn {
+        display: none;
+     }
+     
 
 }
