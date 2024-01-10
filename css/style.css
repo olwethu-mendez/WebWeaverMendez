@@ -662,6 +662,7 @@ main {
 .stack-sect h3{
     /*margin:15px 180px;*/
     width: 100%;
+    text-align: center;
 }
 
 .stack-sect .card-container img {
