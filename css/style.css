@@ -646,6 +646,9 @@ main {
     padding-left: 0;
     padding-right: 0;
     margin-bottom: 64px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .stack-sect .card-container {
@@ -663,6 +666,7 @@ main {
     /*margin:15px 180px;*/
     width: 100%;
     text-align: center;
+
 }
 
 .stack-sect .card-container img {
@@ -738,6 +742,34 @@ main {
 .stack-sect .card-container::-webkit-scrollbar-thumb{
     display: none;
 }
+
+/* Buttons
+.card-container::-webkit-scrollbar-button:single-button {
+    display: block;
+    border-style: solid;
+    height: 13px;
+    width: 16px;
+  }
+  /* Up */
+  /*.card-container::-webkit-scrollbar-button:horizontal:single-button:decrement {
+    border-width: 0 8px 8px 8px;
+    border-color: transparent transparent #555555 transparent;
+    translate: rotate(90deg);
+  }
+
+  .card-container::-webkit-scrollbar-button:horizontal:single-button:decrement:hover {
+    border-color: transparent transparent #777777 transparent;
+  }
+  /* Down */
+  /*.card-container::-webkit-scrollbar-button:horizontal:single-button:increment {
+    border-width: 8px 8px 0 8px;
+    border-color: #555555 transparent transparent transparent;
+  }
+
+  .card-container::-webkit-scrollbar-button:horizontal:single-button:increment:hover {
+    border-color: #777777 transparent transparent transparent;
+
+  } */
 
 .card{
     height: 500px;
@@ -928,9 +960,10 @@ main {
 .card-header a i{
     position: absolute;
     top: 0;
-    right: 50%;
-    left: 50%;
-    transform: translateX(-50%)
+    left: 0;
+    transform: translateX(-50%, -50%);
+    font-weight: 900;
+
 }
 
 .card-header img{
