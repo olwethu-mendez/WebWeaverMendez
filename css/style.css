@@ -274,7 +274,7 @@ main {
 }
 
 .hero-illustration img{
-    width: 100%;
+    width: 80%;
 }
 
 .social-icons{
@@ -653,7 +653,7 @@ main {
 
 .stack-sect .card-container {
     width: 100vw;
-    gap: 32px;
+    gap: 16px;
     background: var(--opaque-s-color--);
     margin: 0;
     /*margin-left: -10% !important;*/
