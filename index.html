@@ -82,7 +82,7 @@
 
                     <div class="action-buttons">
                         <a href="#about-sect" class="stnd-btn btn-about">About Me</a>
-                        <a href="https://1drv.ms/b/s!Av-2nsHTieqHjW62MEQbmKYK9I4Q?e=wIVDXe" target="_blank" class="stnd-btn btn-my-cv">My CV</a>
+                        <a href="https://1drv.ms/b/s!Av-2nsHTieqHjW62MEQbmKYK9I4Q?e=wIVDXe" target="_blank" class="stnd-btn btn-my-cv" title="View My CV">My CV</a>
                     </div>
                 </div>
                 <div class="sub-sect hero-illustration">
@@ -103,15 +103,15 @@
                 <div class="sub-sect my-skills">
                     <h3 style="text-align: center; padding-top: 70px;">My Skills</h3>
                     <p>C#</p>
-                    <span class="full-bar c-sharp-bar"><span class="skill-text">70%</span><span class="filled-bar c-sharp-value"></span></span>
+                    <span class="full-bar c-sharp-bar" title="C#"><span class="skill-text">70%</span><span class="filled-bar c-sharp-value"></span></span>
                     <p>Web Development</p>
-                    <span class="full-bar web-dev-bar"><span class="skill-text">85%</span><span class="filled-bar web-dev-value"></span></span>
+                    <span class="full-bar web-dev-bar" title="Web Development"><span class="skill-text">85%</span><span class="filled-bar web-dev-value"></span></span>
                     <p>UI Design</p>
-                    <span class="full-bar UI-design-bar"><span class="skill-text">65%</span><span class="filled-bar UI-design-value"></span></span>
+                    <span class="full-bar UI-design-bar" title="UI Design"><span class="skill-text">65%</span><span class="filled-bar UI-design-value"></span></span>
                     <p>SQL</p>
-                    <span class="full-bar sql-bar"><span class="skill-text">85%</span><span class="filled-bar sql-value"></span></span>
+                    <span class="full-bar sql-bar" title="SQL"><span class="skill-text">85%</span><span class="filled-bar sql-value"></span></span>
                     <p>Python</p>
-                    <span class="full-bar python-bar"><span class="skill-text">75%</span><span class="filled-bar python-value"></span></span>
+                    <span class="full-bar python-bar" title="Python"><span class="skill-text">75%</span><span class="filled-bar python-value"></span></span>
                 </div>
             </div>
 
@@ -120,23 +120,23 @@
                 <div>
                     <div class="card-container snaps-inline">
                         <!--replace text with logos and symbols-->
-                        <span><img src="img/HTML5_logo_and_wordmark.svg.png"/></span>
-                        <span><img src="img/CSS3_logo_and_wordmark.svg.png"/></span>
-                        <span><img src="img/Javascript_badge.svg.png"/></span>
-                        <!--<span><img src="img/2560px-Node.js_logo.svg.png"/></span>-->
-                        <span><img src="img/Logo_C_sharp.svg.png"/></span>
-                        <span><img src="img/net-framework-software-framework-programmer-computing-platform-microsoft-corporation-7s-framework-example-fc9567e8f7ad2cf4ae2ec2ff28e5f3b9.png"/></span>
-                        <span><img src="img/NET_Core_Logo.svg.png"/></span>
-                        <span><img src="img/Microsoft_SQL_Server_Logo.svg.png"/></span>
-                        <!--<span><img src="img/MongoDB_Logo.svg.png"/></span>-->
-                        <span><img src="img/Bootstrap_logo.svg.png"/></span>
-                    	<span><img src="img/Git_icon.svg.png"/></span>
-                        <span><img src="img/Python-logo-notext.svg.png"/></span>
-                        <span><img src="img/Jupyter_logo.svg.png"/></span>
-                        <span><img src="img/1667px-Figma-logo.svg.png"/></span>
+                        <span title="HTML"><img src="img/HTML5_logo_and_wordmark.svg.png"/></span>
+                        <span title="CSS"><img src="img/CSS3_logo_and_wordmark.svg.png"/></span>
+                        <span title="JavaScript"><img src="img/Javascript_badge.svg.png"/></span>
+                        <!--<span title="NodeJS"><img src="img/2560px-Node.js_logo.svg.png"/></span>-->
+                        <span title="C#"><img src="img/Logo_C_sharp.svg.png"/></span>
+                        <span title="Microsost ASP"><img src="img/net-framework-software-framework-programmer-computing-platform-microsoft-corporation-7s-framework-example-fc9567e8f7ad2cf4ae2ec2ff28e5f3b9.png"/></span>
+                        <span title="dotNet"><img src="img/NET_Core_Logo.svg.png"/></span>
+                        <span title="Microsoft SQL Server"><img src="img/Microsoft_SQL_Server_Logo.svg.png"/></span>
+                        <!--<span title="MongoDB"><img src="img/MongoDB_Logo.svg.png"/></span>-->
+                        <span title="Bootstrap"><img src="img/Bootstrap_logo.svg.png"/></span>
+                    	<span title="Git"><img src="img/Git_icon.svg.png"/></span>
+                        <span title="Python"><img src="img/Python-logo-notext.svg.png"/></span>
+                        <span title="Jupyter"><img src="img/Jupyter_logo.svg.png"/></span>
+                        <span title="Figma"><img src="img/1667px-Figma-logo.svg.png"/></span>
                     </div>
-                    <button id="prevBtn"><</button>
-                    <button id="nextBtn">></button>
+                    <button class="prevBtn" title="reverse"><</button>
+                    <button class="nextBtn" title="forward">></button>
 
                 </div>
             </div>
@@ -254,7 +254,7 @@
                                         <p>My third year project - a web system for a primary health care facility to better manage patient bookings, records, folders and appointments, and administrative services for the staff.</p>   
                                     </div>
                                     
-                                    <button class="stnd-btn btn-more-info">Learn More</button>
+                                    <button class="stnd-btn btn-more-info" title="click to flip card">Learn More</button>
                                     
                                 </div>
                                 <div class="card-back">
@@ -273,21 +273,28 @@
                         <div class="card-image-wrapper">
                             <div class="card-image-content">
                                 <div class="card-images-container">
-                                    <img src="img/eNompilo/eNompilo (1).png" width="350px">
-                                    <img src="img/eNompilo/eNompilo (2).png" width="350px">
-                                    <img src="img/eNompilo/eNompilo (3).png" width="350px">
-                                    <img src="img/eNompilo/eNompilo (4).png" width="350px">
-                                    <img src="img/eNompilo/eNompilo (5).png" width="350px">
-                                    <img src="img/eNompilo/eNompilo (6).png" width="350px">
-                                    <img src="img/eNompilo/eNompilo (7).png" width="350px">
-                                    <img src="img/eNompilo/eNompilo (8).png" width="350px">
-                                    <img src="img/eNompilo/eNompilo (9).png" width="350px">
-                                    <img src="img/eNompilo/eNompilo (10).png" width="350px">
-                                    <img src="img/eNompilo/eNompilo (11).png" width="350px">
-                                    <img src="img/eNompilo/eNompilo (12).png" width="350px">
+                                    <div class="image-item"><img src="img/eNompilo/eNompilo (1).png" width="350px"></div>
+                                    <div class="image-item"><img src="img/eNompilo/eNompilo (3).png" width="350px"></div>
+                                    <div class="image-item"><img src="img/eNompilo/eNompilo (4).png" width="350px"></div>
+                                    <div class="image-item"><img src="img/eNompilo/eNompilo (5).png" width="350px"></div>
+                                    <div class="image-item"><img src="img/eNompilo/eNompilo (2).png" width="350px"></div>
+                                    <div class="image-item"><img src="img/eNompilo/eNompilo (6).png" width="350px"></div>
+                                    <div class="image-item"><img src="img/eNompilo/eNompilo (7).png" width="350px"></div>
+                                    <div class="image-item"><img src="img/eNompilo/eNompilo (8).png" width="350px"></div>
+                                    <div class="image-item"><img src="img/eNompilo/eNompilo (9).png" width="350px"></div>
+                                    <div class="image-item"><img src="img/eNompilo/eNompilo (10).png" width="350px"></div>
+                                    <div class="image-item"><img src="img/eNompilo/eNompilo (11).png" width="350px"></div>
+                                    <div class="image-item"><img src="img/eNompilo/eNompilo (12).png" width="350px"></div>
                                     <!-- <img src="img/ClockApp/dayClock.png" width="350px">
                                     <img src="img/ClockApp/runningTimer.png" width="350px">
                                     <img src="img/ClockApp/setTimer.png" width="350px"> -->
+                                </div>
+
+                                <div class="popup-image">
+                                    <span class="closer">&times;</span>
+                                    <span class="prev-slide">&lt;</span>
+                                    <img src="">
+                                    <span class="next-slide">&gt;</span>
                                 </div>
                             </div>
                         </div>
@@ -306,7 +313,7 @@
                                         <p>This is my portfolio. It's also an ongoing project (a static site that needs constant updating and improving). It will mainly showcase my skills, experiences, qualifications and projects.</p>
                                     </div>
                                     <div>
-                                        <button class="stnd-btn btn-more-info">Learn More</button>
+                                        <button class="stnd-btn btn-more-info" title="click to flip card">Learn More</button>
                                     </div>
                                 </div>
                                 <div class="card-back">
@@ -330,6 +337,13 @@
                                     <img src="img/ClockApp/runningTimer.png" width="350px">
                                     <img src="img/ClockApp/setTimer.png" width="350px"> -->
                                 </div>
+
+                                <div class="popup-image">
+                                    <span class="closer">&times;</span>
+                                    <span class="prev-slide">&lt;</span>
+                                    <img src="">
+                                    <span class="next-slide">&gt;</span>
+                                </div>
                             </div>
                         </div>
                         
@@ -347,7 +361,7 @@
                                         <p>This Calculator App is a CSS & JS practice project. It's a calculator app with basic arithrmetic functions. It's an ongoing project I'll update it to perform more complex arithmetic functions.</p>   
                                     </div>
                                     <div>
-                                        <button class="stnd-btn btn-more-info">Learn More</button>
+                                        <button class="stnd-btn btn-more-info" title="click to flip card">Learn More</button>
                                     </div>
                                 </div>
                                 <div class="card-back">
@@ -371,6 +385,13 @@
                                     <img src="img/ClockApp/runningTimer.png" width="350px">
                                     <img src="img/ClockApp/setTimer.png" width="350px"> -->
                                 </div>
+
+                                <div class="popup-image">
+                                    <span class="closer">&times;</span>
+                                    <span class="prev-slide">&lt;</span>
+                                    <img src="">
+                                    <span class="next-slide">&gt;</span>
+                                </div>
                             </div>
                         </div>
                         
@@ -388,7 +409,7 @@
                                         <p>This Clock App is a javascript practice project. It serves to tell time as an analogue clock and has the additional features of a stopwatch and a timer. It's background alos reflects the time of day</p>   
                                     </div>
                                     <div>
-                                        <button class="stnd-btn btn-more-info">Learn More</button>
+                                        <button class="stnd-btn btn-more-info" title="click to flip card">Learn More</button>
                                     </div>
                                 </div>
                                 <div class="card-back">
@@ -411,6 +432,13 @@
                                     <img src="img/ClockApp/dayClock.png" width="350px">
                                     <img src="img/ClockApp/runningTimer.png" width="350px">
                                     <img src="img/ClockApp/setTimer.png" width="350px">
+                                </div>
+
+                                <div class="popup-image">
+                                    <span class="closer">&times;</span>
+                                    <span class="prev-slide">&lt;</span>
+                                    <img src="">
+                                    <span class="next-slide">&gt;</span>
                                 </div>
                             </div>
                         </div>
@@ -521,6 +549,147 @@
         modal(".open-modal", ".card-image-wrapper", ".card-image-content", true)
     </script>
     <script>
+
+const images = Array.from(document.querySelectorAll('.card-images-container img'));
+let currentImageIndex = 0;
+
+document.querySelectorAll('.prev-slide').forEach((prevButton) => {
+    prevButton.disabled = false; // Ensure the previous button is enabled
+});
+
+document.querySelectorAll('.next-slide').forEach((nextButton) => {
+    nextButton.disabled = false; // Ensure the next button is enabled
+});
+
+
+document.querySelectorAll('.card-images-container img').forEach((image, i) => {
+    image.onclick = () => {
+        const popUpBlocks = document.querySelectorAll('.popup-image');
+        popUpBlocks.forEach((popUpBlock, j) => {
+            popUpBlock.style.display = 'flex';
+        });
+        
+        const popUpImages = document.querySelectorAll('.popup-image img');
+        popUpImages.forEach((popUpImage, k) => {
+            popUpImage.src = image.getAttribute('src');
+        });
+    };
+});
+
+document.querySelectorAll('.prev-slide').forEach((prevButton) => {
+    prevButton.onclick = () => {
+        currentImageIndex--;
+        if (currentImageIndex < 0) {
+            currentImageIndex = images.length - 1; // Go to the last image if at the beginning
+        }
+        const popUpImages = document.querySelectorAll('.popup-image img');
+        popUpImages.forEach((popUpImage) => {
+            popUpImage.src = images[currentImageIndex].getAttribute('src');
+        });
+
+        // Disable the previous button if at the start of the container
+        if (currentImageIndex ===  0) {
+            prevButton.disabled = true;
+        } else {
+            prevButton.disabled = false;
+        }
+    };
+
+});
+
+document.querySelectorAll('.next-slide').forEach((nextButton) => {
+    nextButton.onclick = () => {
+        currentImageIndex++;
+        if (currentImageIndex >= images.length) {
+            currentImageIndex = 0; // Go to the first image if at the end
+        }
+        const popUpImages = document.querySelectorAll('.popup-image img');
+        popUpImages.forEach((popUpImage) => {
+            popUpImage.src = images[currentImageIndex].getAttribute('src');
+        });
+
+        // Disable the next button if at the end of the container
+        if (currentImageIndex === images.length -  1) {
+            nextButton.disabled = true;
+        } else {
+            nextButton.disabled = false;
+        }
+    };
+});
+
+document.querySelectorAll('.popup-image .closer').forEach((closer) => {
+    closer.onclick = () => {
+        const popUpBlocks = document.querySelectorAll('.popup-image');
+        popUpBlocks.forEach((popUpBlock) => {
+            popUpBlock.style.display = 'none';
+        });
+    };
+});
+
+
+        // document.querySelectorAll('.card-images-container img').forEach((image, i) =>{
+        //     image.onclick =() =>{
+        //         document.querySelectorAll('.popup-image').forEach((popUpBlock, j) =>{
+        //             popUpBlock.style.display = 'flex';
+        //         })
+        //         document.querySelectorAll('.popup-image img').forEach((popUpImage, k) =>{
+        //             popUpImage.src = image.getAttribute('src');
+
+        //             document.querySelectorAll('.prev-slide').forEach((prev, l) =>{
+        //                 prev.onclick = () =>{
+        //                     popUpImage.src = image[k--].getAttribute('src');
+        //                 }
+        //             })
+
+        //             document.querySelectorAll('.next-slide').forEach((next, m) =>{
+        //                 next.onclick = () =>{
+        //                     popUpImage.src = image[k++].getAttribute('src');
+        //                 }
+        //             })
+        //             //the next/prev buttons need us to use actual loops to control them.
+        //         })
+        //     }
+        // });
+        // document.querySelectorAll('.popup-image .closer').forEach((closer, n) => {
+        //     closer.onclick = () =>{
+        //         document.querySelectorAll('.popup-image').forEach((popUpBlock, o) =>{
+        //             popUpBlock.style.display = 'none';
+        //         })
+                
+        //     }
+        // })
+
+        // const image = document.querySelectorAll('.card-images-container img');
+        // const popUpBlock = document.querySelectorAll('.popup-image');
+        // const popUpImage = document.querySelectorAll('.popup-image img');
+        // const closer = document.querySelectorAll('.popup-image .closer');
+        // for(let i = 0; i < image.length; i++){
+        //     image[i].onclick =() =>{
+        //         for(let j = 0; j < popUpBlock.length; j++){
+        //             popUpBlock[j].style.display = 'flex';
+        //         }
+        //         for(let k = 0; k < popUpImage.length; k++){
+        //             popUpImage[k].src = image.getAttribute('src');
+
+        //             // document.querySelectorAll('.prev-slide').forEach(prev =>{
+        //             //     prev.onclick = () =>{
+        //             //         popUpImage--
+        //             //     }
+        //             // })
+        //             //the next/prev buttons need us to use actual loops to control them.
+        //         }
+        //     }
+        // };
+        // for(let l = 0; l < closer.length; l++ ){
+        //     closer[l].onclick = () =>{
+        //         for(let m = 0; m < popUpBlock.length; m++){
+        //             popUpBlock[m].style.display = 'none';
+        //         }
+                
+        //     }
+        // }
+        
+                
         let year = new Date().getFullYear();
         document.getElementById('homeCopyYear').innerHTML = year;
     </script>

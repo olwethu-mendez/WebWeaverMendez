@@ -23,6 +23,29 @@ const body = document.querySelector('body'),
     copyYear = document.querySelector('.copyYear');
     closeProjectSection = document.querySelectorAll('.close-project-sect')
 
+const cardImages = document.querySelectorAll('.card-images-container img');
+const popUpBlock = document.querySelectorAll('.popup-image');
+const popUpCloser = document.querySelectorAll('.popup-image span');
+const popUpImage = document.querySelector('.popup-image img');
+
+
+// for(let i = 0; i < popUpBlock.length;  i++){
+//     for(let j = 0; j < cardImages.length; j++){
+//         cardImages[j].onclick = () => {
+//             popUpBlock[i].style.display = 'block';
+//             for(let k = 0; k<popUpImage.length; k++){
+//                 popUpImage[k].src = cardImages[j].getAttribute('src');
+//             }
+//         }
+//     }
+//     for(let l = 0; l< popUpCloser.length; l++){
+//         popUpCloser[l].onclick = () => {
+//             popUpBlock[i].style.display = 'none';
+//         }
+//     }
+
+// }
+
 const lightMode = () => {
     document.body.classList.add("light");
     localStorage.setItem("mode", "light-mode");
@@ -149,8 +172,8 @@ function clockTick() {
   // here we run the clockTick function every 1000ms (1 second)
   setInterval(clockTick, 43200000);
 
-  let prevBtn = document.getElementById('prevBtn');
-let nextBtn = document.getElementById('nextBtn');
+  let prevBtn = document.querySelector('.prevBtn');
+let nextBtn = document.querySelector('.nextBtn');
 let container = document.querySelector('.card-container');
 let items = container.children;
 let itemWidth = items[0].offsetWidth; // assuming all items have the same width
@@ -164,4 +187,55 @@ prevBtn.addEventListener('click', function() {
 nextBtn.addEventListener('click', function() {
    if (container.scrollLeft + containerWidth >= container.scrollWidth) return;
    container.scrollLeft += itemWidth;
+});
+
+const prevSlideButtons = document.querySelectorAll('.prev-slide');
+const nextSlideButtons = document.querySelectorAll('.next-slide');
+const slides = document.querySelectorAll('.card-images-container img');
+
+// Initialize slide index to 0
+let slideIndex = 0;
+
+// Show the first slide
+slides[slideIndex].style.display = 'block';
+
+// Add event listeners to the navigation buttons
+prevSlideButtons.forEach(button => {
+    button.addEventListener('click', () => {
+        // Decrement the slide index
+        slideIndex--;
+        
+        // Hide all slides
+        slides.forEach(slide => {
+            slide.style.display = 'none';
+        });
+        
+        // Show the new slide
+        slides[slideIndex].style.display = 'block';
+        
+        // Reset the slide index if it goes beyond the range
+        if (slideIndex < 0) {
+            slideIndex = slides.length - 1;
+        }
+    });
+});
+
+nextSlideButtons.forEach(button => {
+    button.addEventListener('click', () => {
+        // Increment the slide index
+        slideIndex++;
+        
+        // Hide all slides
+        slides.forEach(slide => {
+            slide.style.display = 'none';
+        });
+        
+        // Show the new slide
+        slides[slideIndex].style.display = 'block';
+        
+        // Reset the slide index if it goes beyond the range
+        if (slideIndex >= slides.length) {
+            slideIndex = 0;
+        }
+    });
 });

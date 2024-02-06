@@ -687,7 +687,7 @@ main {
     position: relative;
 }
 
-#prevBtn, #nextBtn {
+.prevBtn, .nextBtn {
     position: absolute;
     transform: translateY(45%);
     background-color: rgba(85, 85, 85, .25);
@@ -698,11 +698,11 @@ main {
     border-radius: 5px;
  }
  
- #prevBtn {
+ .prevBtn {
     left: 10px;
  }
  
- #nextBtn {
+ .nextBtn {
     right: 10px;
  }
  
@@ -793,23 +793,61 @@ main {
     flex-wrap: wrap;
     width: fit-content;
     height: fit-content;
-    /*position: relative;*/
+    position: relative;
 }
 
 .card-images-container img{
     border-radius: 16px;
+    cursor: pointer;
 }
 
 .card-images-container img:hover{
-    scale: 2.25;
-    z-index: 500;
-    justify-self: center;
-    align-self: center;
-    position: absolute;
-    left: 50%;
-    right: 50%;
-    top: 7.5%;
+    scale: 1.1;
 }
+
+.card-image-content .popup-image{
+    position: fixed;
+    top:0; left: 0;
+    background: var(--secondary-color--);
+    height: 100%;
+    width: 100%;
+    z-index: 100;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    display: none;
+}
+
+.card-image-content .popup-image .closer{
+    position: absolute;
+    top:0; right: 0;
+    font-size: 36px;
+    color: red;
+    cursor: pointer;
+    z-index: inherit;
+}
+
+.card-image-content .popup-image img{
+    border: 3px solid var(--secondary-color--);
+    border-radius: 5px;
+    width: 90%;
+}
+
+.prev-slide, .next-slide {
+    cursor: pointer;
+    font-size: 2em;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 5px 10px;
+    margin: 10px;
+}
+
+.prev-slide[disabled],
+.next-slide[disabled] {
+    opacity:  0.5;
+    pointer-events: none;
+}
+
 .card-case{
     width: 345px;
     height: 500px;
@@ -1854,6 +1892,10 @@ footer{
         width: 275px;
     }
 
+    .card-image-content .popup-image img{
+        width: 90%;
+    }
+
     .project-card .card-back .p{
         padding: 5px;
         width: 275px;
@@ -1966,7 +2008,7 @@ footer{
         display: block;
     }
 
-    #prevBtn, #nextBtn {
+    .prevBtn, .nextBtn {
         display: none;
      }
      
