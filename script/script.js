@@ -193,49 +193,102 @@ const prevSlideButtons = document.querySelectorAll('.prev-slide');
 const nextSlideButtons = document.querySelectorAll('.next-slide');
 const slides = document.querySelectorAll('.card-images-container img');
 
-// Initialize slide index to 0
-let slideIndex = 0;
+document.addEventListener('DOMContentLoaded', (event) => {
+    const images = Array.from(document.querySelectorAll('.card-images-container img'));
+let currentImageIndex = 0;
+let currentChildIndex = 0;
 
-// Show the first slide
-slides[slideIndex].style.display = 'block';
+let directChildren;
 
-// Add event listeners to the navigation buttons
-prevSlideButtons.forEach(button => {
-    button.addEventListener('click', () => {
-        // Decrement the slide index
-        slideIndex--;
-        
-        // Hide all slides
-        slides.forEach(slide => {
-            slide.style.display = 'none';
-        });
-        
-        // Show the new slide
-        slides[slideIndex].style.display = 'block';
-        
-        // Reset the slide index if it goes beyond the range
-        if (slideIndex < 0) {
-            slideIndex = slides.length - 1;
-        }
-    });
+document.querySelectorAll('.prev-slide').forEach((prevButton) => {
+    prevButton.disabled = false; // Ensure the previous button is enabled
 });
 
-nextSlideButtons.forEach(button => {
-    button.addEventListener('click', () => {
-        // Increment the slide index
-        slideIndex++;
-        
-        // Hide all slides
-        slides.forEach(slide => {
-            slide.style.display = 'none';
+document.querySelectorAll('.next-slide').forEach((nextButton) => {
+    nextButton.disabled = false; // Ensure the next button is enabled
+});
+
+images.forEach((image, i) => {
+    image.onclick = () => {
+        currentImageIndex = i;
+        directChildren = Array.from(document.querySelectorAll('.card-images-container img')[currentImageIndex].parentElement.children);
+        let l;
+        for(l = 0; (l<=currentImageIndex) && image != directChildren[l]; l++){
+            continue;
+        }
+        currentImageIndex = l;
+        console.log("length of array: " + directChildren.length);
+        console.log("index position" + currentImageIndex);
+        const popUpBlocks = document.querySelectorAll('.popup-image');
+        popUpBlocks.forEach((popUpBlock, j) => {
+            popUpBlock.style.display = 'flex';
         });
         
-        // Show the new slide
-        slides[slideIndex].style.display = 'block';
-        
-        // Reset the slide index if it goes beyond the range
-        if (slideIndex >= slides.length) {
-            slideIndex = 0;
-        }
-    });
+        const popUpImages = document.querySelectorAll('.popup-image img');
+        popUpImages.forEach((popUpImage, k) => {
+            popUpImage.src = image.getAttribute('src');
+        });
+    };
 });
+
+document.querySelectorAll('.prev-slide').forEach((prevButton) => {
+    prevButton.onclick = () => {
+        currentImageIndex--;
+        console.log(currentImageIndex);
+        if (currentImageIndex < 0) {
+            currentImageIndex = directChildren.length - 1; // Go to the last image if at the beginning
+        }
+        const popUpImages = document.querySelectorAll('.popup-image img');
+        popUpImages.forEach((popUpImage) => {
+            popUpImage.src = directChildren[currentImageIndex].getAttribute('src');
+        });
+
+        if (currentImageIndex === 0) {
+            prevButton.disabled = true;
+        } else {
+            prevButton.disabled = false;
+        }
+    };
+
+});
+
+document.querySelectorAll('.next-slide').forEach((nextButton) => {
+    nextButton.onclick = () => {
+        currentImageIndex++;
+        console.log(currentImageIndex);
+        if (currentImageIndex >= directChildren.length) {
+            currentImageIndex = 0; // Go to the first image if at the end
+        }
+        const popUpImages = document.querySelectorAll('.popup-image img');
+        popUpImages.forEach((popUpImage) => {
+            popUpImage.src = directChildren[currentImageIndex].getAttribute('src');
+        });
+
+        // Disable the next button if at the end of the container
+        if (currentImageIndex === directChildren.length -  1) {
+            nextButton.disabled = true;
+        } else {
+            nextButton.disabled = false;
+        }
+    };
+});
+
+document.querySelectorAll('.popup-image .closer').forEach((closer) => {
+    closer.onclick = () => {
+        const popUpBlocks = document.querySelectorAll('.popup-image');
+        popUpBlocks.forEach((popUpBlock) => {
+            popUpBlock.style.display = 'none';
+        });
+        
+        const popUpImages = document.querySelectorAll('.popup-image img');
+        popUpImages.forEach((popUpImage, k) => {
+            popUpImage.src = "";
+        });
+        
+        currentImageIndex = undefined;
+        directChildren = undefined;
+        console.log(directChildren.length);
+    };
+});
+  });
+  

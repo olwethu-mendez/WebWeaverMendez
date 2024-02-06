@@ -113,6 +113,13 @@
                                 <img src="img/UI/Tshangana Jewelers/tshangana jewelers (6).png" width="350px">
                                 <img src="img/UI/Tshangana Jewelers/tshangana jewelers (7).png" width="350px">
                             </div>
+
+                            <div class="popup-image">
+                                <span class="closer">&times;</span>
+                                <span class="prev-slide">&lt;</span>
+                                <img src="">
+                                <span class="next-slide">&gt;</span>
+                            </div>
                         </div>
                     </div>
 
@@ -156,6 +163,13 @@
                                 <img src="img/UI/eNompilo/eNompilo (5).png" width="350px">
                                 <img src="img/UI/eNompilo/eNompilo (6).png" width="350px">
                             </div>
+
+                            <div class="popup-image">
+                                <span class="closer">&times;</span>
+                                <span class="prev-slide">&lt;</span>
+                                <img src="">
+                                <span class="next-slide">&gt;</span>
+                            </div>
                         </div>
                     </div>
 
@@ -198,6 +212,13 @@
                                 <img src="img/UI/WWM/webweavermendez (4).png" width="350px">
                                 <img src="img/UI/WWM/webweavermendez (5).png" width="350px">
                                 <img src="img/UI/WWM/webweavermendez (6).png" width="350px">
+                            </div>
+
+                            <div class="popup-image">
+                                <span class="closer">&times;</span>
+                                <span class="prev-slide">&lt;</span>
+                                <img src="">
+                                <span class="next-slide">&gt;</span>
                             </div>
                         </div>
                     </div>
@@ -245,6 +266,13 @@
                                     <img src="img/ClockApp/runningTimer.png" width="350px">
                                     <img src="img/ClockApp/setTimer.png" width="350px"> -->
                                 </div>
+
+                                <div class="popup-image">
+                                    <span class="closer">&times;</span>
+                                    <span class="prev-slide">&lt;</span>
+                                    <img src="">
+                                    <span class="next-slide">&gt;</span>
+                                </div>
                             </div>
                         </div>
                         
@@ -286,6 +314,13 @@
                                     <img src="img/ClockApp/runningTimer.png" width="350px">
                                     <img src="img/ClockApp/setTimer.png" width="350px">
                                 </div>
+
+                                <div class="popup-image">
+                                    <span class="closer">&times;</span>
+                                    <span class="prev-slide">&lt;</span>
+                                    <img src="">
+                                    <span class="next-slide">&gt;</span>
+                                </div>
                             </div>
                         </div>
         
@@ -326,6 +361,13 @@
                                     <!-- <img src="img/ClockApp/dayClock.png" width="350px">
                                     <img src="img/ClockApp/runningTimer.png" width="350px">
                                     <img src="img/ClockApp/setTimer.png" width="350px"> -->
+                                </div>
+
+                                <div class="popup-image">
+                                    <span class="closer">&times;</span>
+                                    <span class="prev-slide">&lt;</span>
+                                    <img src="">
+                                    <span class="next-slide">&gt;</span>
                                 </div>
                             </div>
                         </div>
@@ -370,6 +412,13 @@
                                     <img src="img/QR/QR Code (5).png" width="350px">
                                     
                                 </div>
+
+                                <div class="popup-image">
+                                    <span class="closer">&times;</span>
+                                    <span class="prev-slide">&lt;</span>
+                                    <img src="">
+                                    <span class="next-slide">&gt;</span>
+                                </div>
                             </div>
                         </div>
         
@@ -413,6 +462,13 @@
                                     <img src="img/qr-scanner/qr-scanner (5).png" width="350px">
                                     <img src="img/qr-scanner/qr-scanner (6).png" width="350px">
                                     
+                                </div>
+
+                                <div class="popup-image">
+                                    <span class="closer">&times;</span>
+                                    <span class="prev-slide">&lt;</span>
+                                    <img src="">
+                                    <span class="next-slide">&gt;</span>
                                 </div>
                             </div>
                         </div>
@@ -471,6 +527,13 @@
                                     <img src="img/ClockApp/runningTimer.png" width="350px">
                                     <img src="img/ClockApp/setTimer.png" width="350px"> -->
                                 </div>
+
+                                <div class="popup-image">
+                                    <span class="closer">&times;</span>
+                                    <span class="prev-slide">&lt;</span>
+                                    <img src="">
+                                    <span class="next-slide">&gt;</span>
+                                </div>
                             </div>
                         </div>
                 </div>
@@ -491,6 +554,102 @@
     </footer>
     <script src="script/script.js"></script>
     <script>
+// const images = Array.from(document.querySelectorAll('.card-images-container img'));
+// let currentImageIndex = 0;
+// let currentChildIndex = 0;
+
+// let directChildren;
+
+// document.querySelectorAll('.prev-slide').forEach((prevButton) => {
+//     prevButton.disabled = false; // Ensure the previous button is enabled
+// });
+
+// document.querySelectorAll('.next-slide').forEach((nextButton) => {
+//     nextButton.disabled = false; // Ensure the next button is enabled
+// });
+
+// images.forEach((image, i) => {
+//     image.onclick = () => {
+//         currentImageIndex = i;
+//         directChildren = Array.from(document.querySelectorAll('.card-images-container img')[currentImageIndex].parentElement.children);
+//         let l;
+//         for(l = 0; (l<=currentImageIndex) && image != directChildren[l]; l++){
+//             continue;
+//         }
+//         currentImageIndex = l;
+//         console.log("length of array: " + directChildren.length);
+//         console.log("index position" + currentImageIndex);
+//         const popUpBlocks = document.querySelectorAll('.popup-image');
+//         popUpBlocks.forEach((popUpBlock, j) => {
+//             popUpBlock.style.display = 'flex';
+//         });
+        
+//         const popUpImages = document.querySelectorAll('.popup-image img');
+//         popUpImages.forEach((popUpImage, k) => {
+//             popUpImage.src = image.getAttribute('src');
+//         });
+//     };
+// });
+
+// document.querySelectorAll('.prev-slide').forEach((prevButton) => {
+//     prevButton.onclick = () => {
+//         currentImageIndex--;
+//         console.log(currentImageIndex);
+//         if (currentImageIndex < 0) {
+//             currentImageIndex = directChildren.length - 1; // Go to the last image if at the beginning
+//         }
+//         const popUpImages = document.querySelectorAll('.popup-image img');
+//         popUpImages.forEach((popUpImage) => {
+//             popUpImage.src = directChildren[currentImageIndex].getAttribute('src');
+//         });
+
+//         if (currentImageIndex === 0) {
+//             prevButton.disabled = true;
+//         } else {
+//             prevButton.disabled = false;
+//         }
+//     };
+
+// });
+
+// document.querySelectorAll('.next-slide').forEach((nextButton) => {
+//     nextButton.onclick = () => {
+//         currentImageIndex++;
+//         if (currentImageIndex >= directChildren.length) {
+//             currentImageIndex = 0; // Go to the first image if at the end
+//         }
+//         const popUpImages = document.querySelectorAll('.popup-image img');
+//         popUpImages.forEach((popUpImage) => {
+//             popUpImage.src = directChildren[currentImageIndex].getAttribute('src');
+//         });
+
+//         // Disable the next button if at the end of the container
+//         if (currentImageIndex === directChildren.length -  1) {
+//             nextButton.disabled = true;
+//         } else {
+//             nextButton.disabled = false;
+//         }
+//     };
+// });
+
+// document.querySelectorAll('.popup-image .closer').forEach((closer) => {
+//     closer.onclick = () => {
+//         const popUpBlocks = document.querySelectorAll('.popup-image');
+//         popUpBlocks.forEach((popUpBlock) => {
+//             popUpBlock.style.display = 'none';
+//         });
+        
+//         const popUpImages = document.querySelectorAll('.popup-image img');
+//         popUpImages.forEach((popUpImage, k) => {
+//             popUpImage.src = "";
+//         });
+        
+//         currentImageIndex = null;
+//         directChildren = null;
+//         console.log(directChildren.length);
+//     };
+// });
+
         modal(".open-modal", ".card-image-wrapper", ".card-image-content", true)
         let year = new Date().getFullYear();
         document.getElementById('projectCopyYear').innerHTML = year;
