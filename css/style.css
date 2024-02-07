@@ -1896,6 +1896,27 @@ footer{
         width: 90%;
     }
 
+    .prev-slide, .next-slide {
+        cursor: pointer;
+        font-size: 2em;
+        color: white;
+        background-color: rgba(0, 0, 0, 0.5);
+        padding: 5px 10px;
+        position: absolute;
+        width: 46%;
+        height: 55px;
+        text-align: center;
+        bottom: 20%;
+    }
+
+    .prev-slide{
+        left: 0%;
+    }
+    
+    .next-slide {
+        right: 0%;
+    }
+
     .project-card .card-back .p{
         padding: 5px;
         width: 275px;
