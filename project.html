@@ -656,6 +656,11 @@ document.addEventListener('DOMContentLoaded', (event) => {
             console.log(directChildren.length);
         };
     });
+
+    document.querySelector('#chDropProj').addEventListener('change', (e) =>{
+            event.stopPropagation();
+            nav.classList.add("active");
+        })
 })
 
 

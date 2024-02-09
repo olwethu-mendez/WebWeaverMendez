@@ -215,13 +215,13 @@ nav .other-nav-items{
 }
 
 .project-drop{
-    display: inline-block;
+    display: inline-flex;
     transform: rotate(90deg);
     cursor: pointer;
 }
 
 #chDropHome:checked ~ * #home-drop-item, #chDropProj:checked ~ * #proj-drop-item{
-    display: block;
+    display: flex;
 }
 
 #chDropHome:checked ~ * .project-drop, #chDropProj:checked ~ * .project-drop{
@@ -1368,9 +1368,11 @@ footer{
     }
 
     .dropdown-drop-cont{
+        justify-content: center;
+        align-items: center;
+        left: 50%;
         width: 150px;
-        height: 150px;
-        bottom: 0;
+        height: 45px;
         background-color: var(--secondary-color--);
     }
 }

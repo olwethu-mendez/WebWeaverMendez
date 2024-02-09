@@ -292,10 +292,11 @@ document.addEventListener('DOMContentLoaded', (event) => {
         };
     });
 
-    // document.querySelectorAll('.dropdown-drop').forEach(dropDownClick => {
-    //     dropDownClick.addEventListener('click', (e) =>{
-    //         event.stopPropagation();
-    //     })
-    // })
+    document.querySelector('#chDropHome').addEventListener('change', (e) =>{
+            event.stopPropagation();
+            nav.classList.add("active");
+        })
+
+    
   });
   
