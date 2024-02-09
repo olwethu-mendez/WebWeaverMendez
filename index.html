@@ -21,7 +21,7 @@
     <div class="arrow-container"><a href="#"><i class="bi bi-arrow-up"></i></a></div>
     <div class="container">
         <header>
-            
+            <input type="checkbox" id="chDropHome">
             <nav>
                 <a href="index.html" class="nav-logo desk-logo"><span class="logo">WM</span> <span class="site-name">WebWeaver Mendez</span></a>
                 <a href="index.html" class="nav-logo mob-logo"><span class="logo">WM</span></a>
@@ -40,8 +40,12 @@
                     <li>
                         <a href="#portfolio-sect">skills</a>
                     </li>
-                    <li>
-                        <a href="project.html">portfolio</a>
+                    <li style="display: inline-block; position: relative;">
+                        <a href="#my-projects">projects</a>&nbsp; <label for="chDropHome" class="dropdown-drop project-drop">&gt;</label>
+                        
+                        <div class="dropdown-drop-cont" id="home-drop-item">
+                            <a href="project.html">projects page</a>
+                        </div>
                     </li>
                     <li>
                         <a href="#contact-sect">contact</a>
@@ -237,8 +241,8 @@
                     </div>
                 </div>
                 <br/>
-                <div class="my-projects">
-                    <center><h3>Projects</h3></center>
+                <div class="my-projects" id="my-projects">
+                    <center><h3 style="padding-top: 70px !important;">Projects</h3></center>
                     <div class="card-container snaps-inline">
                         <div class="card-case">
                             <div class="card">

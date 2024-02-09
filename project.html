@@ -20,7 +20,7 @@
     <div class="arrow-container"><a href="#"><i class="bi bi-arrow-up"></i></a></div>
     <div class="container">
         <header>
-            
+            <input type="checkbox" id="chDropProj">
             <nav>
                 <a href="index.html" class="nav-logo desk-logo"><span class="logo">WM</span> <span class="site-name">WebWeaver Mendez</span></a>
                 <a href="index.html" class="nav-logo mob-logo"><span class="logo">WM</span></a>
@@ -39,8 +39,12 @@
                     <li>
                         <a href="index.html#portfolio-sect">skills</a>
                     </li>
-                    <li>
-                        <a href="project.html">portfolio</a>
+                    <li style="display: inline-block; position: relative;">
+                        <a href="index.html#my-projects">projects</a>&nbsp; <label for="chDropProj" class="dropdown-drop project-drop">&gt;</label>
+                        
+                        <div class="dropdown-drop-cont" id="proj-drop-item">
+                            <a href="project.html">projects page</a>
+                        </div>
                     </li>
                     <li>
                         <a href="index.html#contact-sect">contact</a>
