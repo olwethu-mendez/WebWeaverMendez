@@ -1366,6 +1366,13 @@ footer{
         overflow-x: auto;
         overscroll-behavior-inline: contain;
     }
+
+    .dropdown-drop-cont{
+        width: 150px;
+        height: 150px;
+        bottom: 0;
+        background-color: var(--secondary-color--);
+    }
 }
 
 @media only screen and (max-width: 991px){

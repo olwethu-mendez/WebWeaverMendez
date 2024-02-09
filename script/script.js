@@ -291,5 +291,11 @@ document.addEventListener('DOMContentLoaded', (event) => {
             console.log(directChildren.length);
         };
     });
+
+    // document.querySelectorAll('.dropdown-drop').forEach(dropDownClick => {
+    //     dropDownClick.addEventListener('click', (e) =>{
+    //         event.stopPropagation();
+    //     })
+    // })
   });
   
